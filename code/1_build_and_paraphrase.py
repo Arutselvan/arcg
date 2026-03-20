@@ -74,11 +74,45 @@ def is_ollama_running() -> bool:
         return False
 
 
+# Environment variables that fix Ollama's RAM check on systems where
+# buff/cache inflates the "used" column.  OLLAMA_MAX_LOADED_MODELS=1
+# prevents Ollama from trying to keep multiple models resident, and
+# OLLAMA_SCHED_SPREAD=0 keeps the model on a single GPU.
+OLLAMA_ENV = {
+    **os.environ,
+    "OLLAMA_MAX_LOADED_MODELS": "1",
+    "OLLAMA_SCHED_SPREAD":      "0",
+    "OLLAMA_KEEP_ALIVE":        "10m",
+}
+
+
+def restart_ollama_server():
+    """Kill any running Ollama process and restart with the correct env vars."""
+    print("Restarting Ollama server with GPU-optimised settings...")
+    # Kill existing Ollama processes
+    subprocess.run(["pkill", "-x", "ollama"], check=False)
+    time.sleep(3)
+    subprocess.Popen(
+        ["ollama", "serve"],
+        env=OLLAMA_ENV,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    for _ in range(30):
+        time.sleep(2)
+        if is_ollama_running():
+            print("Ollama server started successfully.")
+            return
+    print("ERROR: Could not start Ollama server after 60 seconds.")
+    sys.exit(1)
+
+
 def start_ollama_server():
     """Start the Ollama server as a background process."""
     print("Ollama server is not running. Starting it now...")
     subprocess.Popen(
         ["ollama", "serve"],
+        env=OLLAMA_ENV,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
@@ -147,8 +181,9 @@ def warmup_model(model: str):
 
 
 def ensure_ollama_ready(model: str):
-    if not is_ollama_running():
-        start_ollama_server()
+    # Always restart Ollama with the correct env vars to ensure GPU is used
+    # and the RAM check does not block on buff/cache.
+    restart_ollama_server()
     ensure_model(model)
     warmup_model(model)
 

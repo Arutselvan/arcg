@@ -99,10 +99,39 @@ def is_ollama_running() -> bool:
         return False
 
 
+OLLAMA_ENV = {
+    **os.environ,
+    "OLLAMA_MAX_LOADED_MODELS": "1",
+    "OLLAMA_SCHED_SPREAD":      "0",
+    "OLLAMA_KEEP_ALIVE":        "10m",
+}
+
+
+def restart_ollama_server():
+    """Kill any running Ollama process and restart with GPU-optimised env vars."""
+    print("Restarting Ollama server with GPU-optimised settings...")
+    subprocess.run(["pkill", "-x", "ollama"], check=False)
+    time.sleep(3)
+    subprocess.Popen(
+        ["ollama", "serve"],
+        env=OLLAMA_ENV,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    for _ in range(30):
+        time.sleep(2)
+        if is_ollama_running():
+            print("Ollama server started.")
+            return
+    print("ERROR: Could not start Ollama server.")
+    sys.exit(1)
+
+
 def start_ollama_server():
     print("Starting Ollama server...")
     subprocess.Popen(
         ["ollama", "serve"],
+        env=OLLAMA_ENV,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
@@ -135,8 +164,7 @@ def ensure_model(model: str):
 
 
 def ensure_ollama_ready(model: str, skip_pull: bool = False):
-    if not is_ollama_running():
-        start_ollama_server()
+    restart_ollama_server()
     if not skip_pull:
         ensure_model(model)
 
