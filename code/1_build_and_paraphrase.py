@@ -55,7 +55,9 @@ N_LOGIC           = 25                  # problems from ARC-Challenge
 RANDOM_SEED       = 42
 DATA_DIR          = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 OUTPUT_FILE       = os.path.join(DATA_DIR, "paraphrases.json")
-REQUEST_TIMEOUT   = 300                 # seconds; 70B model can be slow
+REQUEST_TIMEOUT   = 360                 # seconds; 70B model can be slow
+MAX_RETRIES       = 8                   # retries per paraphrase call
+WARMUP_TIMEOUT    = 300                 # seconds to wait for model warmup
 
 # Difficulty bands for GSM8K (approximate by solution length)
 DIFFICULTY_THRESHOLDS = {"easy": 150, "medium": 300}  # characters in solution
@@ -110,10 +112,45 @@ def ensure_model(model: str):
     print(f"  {model} pulled successfully.")
 
 
+def warmup_model(model: str):
+    """Send a trivial prompt and wait until the model responds successfully.
+    This ensures the model is fully loaded into VRAM before real work begins.
+    A 70B model can take 30-120 seconds to load on first use.
+    """
+    print(f"  Warming up {model} (waiting for first successful response)...")
+    payload = {
+        "model":  model,
+        "prompt": "Reply with the single word: ready",
+        "stream": False,
+        "options": {"num_predict": 8, "temperature": 0.0},
+    }
+    deadline = time.time() + WARMUP_TIMEOUT
+    attempt  = 0
+    while time.time() < deadline:
+        attempt += 1
+        try:
+            r = requests.post(
+                f"{OLLAMA_URL}/api/generate",
+                json=payload,
+                timeout=120,
+            )
+            if r.status_code == 200:
+                print(f"  Model {model} is warm and ready (attempt {attempt}).")
+                return
+            # 500 = model still loading; anything else is unexpected
+            print(f"  Warmup attempt {attempt}: HTTP {r.status_code}. Retrying in 10s...")
+        except Exception as exc:
+            print(f"  Warmup attempt {attempt}: {exc}. Retrying in 10s...")
+        time.sleep(10)
+    print(f"ERROR: {model} did not become ready within {WARMUP_TIMEOUT}s.")
+    sys.exit(1)
+
+
 def ensure_ollama_ready(model: str):
     if not is_ollama_running():
         start_ollama_server()
     ensure_model(model)
+    warmup_model(model)
 
 # ---------------------------------------------------------------------------
 # Dataset loading
@@ -274,21 +311,32 @@ def call_ollama(prompt: str, model: str) -> str:
             "num_predict": 512,
         },
     }
-    for attempt in range(3):
+    for attempt in range(MAX_RETRIES):
         try:
             r = requests.post(
                 f"{OLLAMA_URL}/api/generate",
                 json=payload,
                 timeout=REQUEST_TIMEOUT,
             )
+            if r.status_code == 500:
+                # Model may still be loading or temporarily busy
+                wait = min(10 * (attempt + 1), 60)
+                print(f"    [attempt {attempt+1}/{MAX_RETRIES}] HTTP 500 (model loading?). "
+                      f"Retrying in {wait}s...")
+                time.sleep(wait)
+                continue
             r.raise_for_status()
             text = r.json()["response"].strip()
             # Strip <think>...</think> blocks (DeepSeek R1 reasoning traces)
             text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
             return text
+        except requests.exceptions.Timeout:
+            wait = 15
+            print(f"    [attempt {attempt+1}/{MAX_RETRIES}] Timeout. Retrying in {wait}s...")
+            time.sleep(wait)
         except Exception as exc:
-            wait = 2 ** attempt
-            print(f"    [attempt {attempt+1}/3] error: {exc}. Retrying in {wait}s...")
+            wait = min(10 * (attempt + 1), 60)
+            print(f"    [attempt {attempt+1}/{MAX_RETRIES}] error: {exc}. Retrying in {wait}s...")
             time.sleep(wait)
     return ""
 
