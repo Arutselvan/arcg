@@ -163,17 +163,15 @@ def ensure_model(model: str):
     print(f"  {model} ready.")
 
 
-def unload_all_models():
-    """Ask Ollama to unload all currently loaded models to free GPU VRAM.
-    Uses the /api/generate endpoint with keep_alive=0 for each loaded model.
-    Then restarts the server to ensure a clean slate.
-    """
-    print("  Unloading all models from GPU memory...")
+def gpu_cleanup():
+    """Aggressively free all GPU VRAM and CUDA contexts before loading a new model."""
+    print("  [GPU cleanup] Starting full GPU/CUDA memory cleanup...")
+
+    # Step 1: Ask Ollama to unload all models gracefully
     try:
         r = requests.get(f"{OLLAMA_URL}/api/ps", timeout=5)
         if r.status_code == 200:
-            loaded = r.json().get("models", [])
-            for m in loaded:
+            for m in r.json().get("models", []):
                 name = m.get("name", "")
                 if name:
                     try:
@@ -182,17 +180,78 @@ def unload_all_models():
                             json={"model": name, "keep_alive": 0},
                             timeout=30,
                         )
-                        print(f"    Unloaded: {name}")
+                        print(f"    [GPU cleanup] Unloaded model: {name}")
                     except Exception:
                         pass
     except Exception:
         pass
-    time.sleep(3)  # Give Ollama time to release VRAM
-    print("  GPU memory cleared.")
+    time.sleep(2)
+
+    # Step 2: Kill all Ollama processes with SIGKILL
+    for sig in ["-TERM", "-KILL"]:
+        subprocess.run(["pkill", sig, "-f", "ollama"], check=False)
+    time.sleep(3)
+
+    # Step 3: Kill stray processes holding CUDA contexts
+    for proc_name in ["ollama runner", "ollama_llama_server"]:
+        subprocess.run(["pkill", "-9", "-f", proc_name], check=False)
+    time.sleep(2)
+
+    # Step 4: Reset CUDA primary contexts via ctypes
+    try:
+        import ctypes
+        libcuda = None
+        for path in ["/usr/lib/x86_64-linux-gnu/libcuda.so.1",
+                     "/usr/local/cuda/lib64/libcuda.so", "libcuda.so.1"]:
+            try:
+                libcuda = ctypes.CDLL(path); break
+            except OSError:
+                continue
+        if libcuda:
+            libcuda.cuInit(0)
+            device_count = ctypes.c_int(0)
+            libcuda.cuDeviceGetCount(ctypes.byref(device_count))
+            for i in range(device_count.value):
+                device = ctypes.c_int(0)
+                libcuda.cuDeviceGet(ctypes.byref(device), i)
+                ret = libcuda.cuDevicePrimaryCtxReset(device)
+                print(f"    [GPU cleanup] cuDevicePrimaryCtxReset(GPU {i}) = {ret} (0=success)")
+        else:
+            print("    [GPU cleanup] libcuda.so not found; skipping ctypes reset.")
+    except Exception as exc:
+        print(f"    [GPU cleanup] ctypes CUDA reset skipped: {exc}")
+
+    # Step 5: Try nvidia-smi --gpu-reset (bare metal only)
+    try:
+        result = subprocess.run(["nvidia-smi", "--gpu-reset", "-i", "0"],
+                                capture_output=True, text=True, timeout=30, check=False)
+        if result.returncode == 0:
+            print("    [GPU cleanup] nvidia-smi --gpu-reset succeeded.")
+        else:
+            print(f"    [GPU cleanup] nvidia-smi --gpu-reset: {result.stderr.strip()[:80]}")
+    except Exception:
+        pass
+
+    # Step 6: Verify VRAM
+    time.sleep(5)
+    try:
+        result = subprocess.run(
+            ["nvidia-smi", "--query-gpu=memory.free,memory.total",
+             "--format=csv,noheader,nounits"],
+            capture_output=True, text=True, timeout=10, check=False)
+        if result.returncode == 0:
+            free_mb, total_mb = [int(x.strip()) for x in result.stdout.strip().split(",")]
+            used_mb = total_mb - free_mb
+            print(f"    [GPU cleanup] VRAM: {used_mb} MiB used / {total_mb} MiB total ({free_mb} MiB free)")
+            if used_mb > 2000:
+                print("    [GPU cleanup] WARNING: VRAM not fully cleared. A reboot may be needed.")
+    except Exception:
+        pass
+    print("  [GPU cleanup] Done.")
 
 
 def ensure_ollama_ready(model: str, skip_pull: bool = False):
-    unload_all_models()
+    gpu_cleanup()
     restart_ollama_server()
     if not skip_pull:
         ensure_model(model)

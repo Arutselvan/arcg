@@ -146,14 +146,24 @@ def ensure_model(model: str):
     print(f"  {model} pulled successfully.")
 
 
-def unload_all_models():
-    """Unload all currently loaded models from GPU VRAM before switching."""
-    print("  Unloading all models from GPU memory...")
+def gpu_cleanup():
+    """Aggressively free all GPU VRAM and CUDA contexts before loading a new model.
+
+    Steps performed in order:
+    1. Ask Ollama to unload every loaded model via keep_alive=0
+    2. Kill ALL Ollama processes (server + runner) with SIGKILL
+    3. Kill any stray Python/torch processes holding CUDA contexts
+    4. Use ctypes to call cuDevicePrimaryCtxReset on all CUDA devices
+    5. Run nvidia-smi --gpu-reset if available (no-op in containers)
+    6. Wait and verify VRAM is substantially free before returning
+    """
+    print("  [GPU cleanup] Starting full GPU/CUDA memory cleanup...")
+
+    # Step 1: Ask Ollama to unload all models gracefully
     try:
         r = requests.get(f"{OLLAMA_URL}/api/ps", timeout=5)
         if r.status_code == 200:
-            loaded = r.json().get("models", [])
-            for m in loaded:
+            for m in r.json().get("models", []):
                 name = m.get("name", "")
                 if name:
                     try:
@@ -162,13 +172,90 @@ def unload_all_models():
                             json={"model": name, "keep_alive": 0},
                             timeout=30,
                         )
-                        print(f"    Unloaded: {name}")
+                        print(f"    [GPU cleanup] Unloaded model: {name}")
                     except Exception:
                         pass
     except Exception:
         pass
+    time.sleep(2)
+
+    # Step 2: Kill all Ollama processes (server and runner) with SIGKILL
+    for sig in ["-TERM", "-KILL"]:
+        subprocess.run(["pkill", sig, "-f", "ollama"], check=False)
     time.sleep(3)
-    print("  GPU memory cleared.")
+
+    # Step 3: Kill any stray processes that may hold CUDA contexts
+    for proc_name in ["ollama runner", "ollama_llama_server"]:
+        subprocess.run(["pkill", "-9", "-f", proc_name], check=False)
+    time.sleep(2)
+
+    # Step 4: Use CUDA driver API via ctypes to reset primary contexts
+    # This is the most reliable way to free zombie VRAM in containers
+    # where nvidia-smi --gpu-reset is not permitted.
+    try:
+        import ctypes
+        libcuda_paths = [
+            "/usr/lib/x86_64-linux-gnu/libcuda.so.1",
+            "/usr/local/cuda/lib64/libcuda.so",
+            "libcuda.so.1",
+        ]
+        libcuda = None
+        for path in libcuda_paths:
+            try:
+                libcuda = ctypes.CDLL(path)
+                break
+            except OSError:
+                continue
+        if libcuda:
+            # cuInit(0)
+            libcuda.cuInit(0)
+            device_count = ctypes.c_int(0)
+            libcuda.cuDeviceGetCount(ctypes.byref(device_count))
+            for i in range(device_count.value):
+                device = ctypes.c_int(0)
+                libcuda.cuDeviceGet(ctypes.byref(device), i)
+                # cuDevicePrimaryCtxReset releases all memory held by the context
+                ret = libcuda.cuDevicePrimaryCtxReset(device)
+                print(f"    [GPU cleanup] cuDevicePrimaryCtxReset(GPU {i}) = {ret} "
+                      f"(0=success)")
+            print("    [GPU cleanup] CUDA primary contexts reset.")
+        else:
+            print("    [GPU cleanup] libcuda.so not found; skipping ctypes reset.")
+    except Exception as exc:
+        print(f"    [GPU cleanup] ctypes CUDA reset skipped: {exc}")
+
+    # Step 5: Try nvidia-smi --gpu-reset (works on bare metal, no-op in containers)
+    try:
+        result = subprocess.run(
+            ["nvidia-smi", "--gpu-reset", "-i", "0"],
+            capture_output=True, text=True, timeout=30, check=False
+        )
+        if result.returncode == 0:
+            print("    [GPU cleanup] nvidia-smi --gpu-reset succeeded.")
+        else:
+            print(f"    [GPU cleanup] nvidia-smi --gpu-reset not available: {result.stderr.strip()[:80]}")
+    except Exception:
+        pass
+
+    # Step 6: Wait and verify VRAM is free
+    time.sleep(5)
+    try:
+        result = subprocess.run(
+            ["nvidia-smi", "--query-gpu=memory.free,memory.total",
+             "--format=csv,noheader,nounits"],
+            capture_output=True, text=True, timeout=10, check=False
+        )
+        if result.returncode == 0:
+            free_mb, total_mb = [int(x.strip()) for x in result.stdout.strip().split(",")]
+            used_mb = total_mb - free_mb
+            print(f"    [GPU cleanup] VRAM: {used_mb} MiB used / {total_mb} MiB total "
+                  f"({free_mb} MiB free)")
+            if used_mb > 2000:   # more than 2 GB still used
+                print("    [GPU cleanup] WARNING: VRAM not fully cleared. "
+                      "A reboot may be needed if this persists.")
+    except Exception:
+        pass
+    print("  [GPU cleanup] Done.")
 
 
 def warmup_model(model: str):
@@ -206,9 +293,8 @@ def warmup_model(model: str):
 
 
 def ensure_ollama_ready(model: str):
-    # Unload any resident model first to free VRAM, then restart with
-    # correct env vars to ensure GPU is used without RAM check issues.
-    unload_all_models()
+    # Full GPU/CUDA cleanup before every model load to prevent zombie VRAM leaks.
+    gpu_cleanup()
     restart_ollama_server()
     ensure_model(model)
     warmup_model(model)
