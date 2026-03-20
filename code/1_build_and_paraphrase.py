@@ -376,6 +376,9 @@ def call_ollama(prompt: str, model: str) -> str:
     return ""
 
 
+PARAPHRASE_OUTER_RETRIES = 3   # outer retries per paraphrase slot before skipping
+
+
 def generate_paraphrases(problem: dict) -> list[dict]:
     variants = [
         {
@@ -386,10 +389,19 @@ def generate_paraphrases(problem: dict) -> list[dict]:
     ]
     for key, desc in PARAPHRASE_STRATEGIES.items():
         prompt = build_paraphrase_prompt(problem, key, desc)
-        text   = call_ollama(prompt, PARAPHRASE_MODEL)
+        text   = ""
+        for outer in range(1, PARAPHRASE_OUTER_RETRIES + 1):
+            text = call_ollama(prompt, PARAPHRASE_MODEL)
+            if text:
+                break
+            print(f"    WARNING: Empty paraphrase for {problem['id']} {key} "
+                  f"(outer attempt {outer}/{PARAPHRASE_OUTER_RETRIES}). Retrying...")
+            time.sleep(5)
         if not text:
-            print(f"    WARNING: Empty paraphrase for {problem['id']} {key}. Using original.")
-            text = problem["question"]
+            # Do NOT fall back to original — skip this slot to keep the dataset clean.
+            print(f"    SKIP: Could not generate paraphrase for {problem['id']} {key} "
+                  f"after {PARAPHRASE_OUTER_RETRIES} outer retries. Slot omitted.")
+            continue
         variants.append({"id": key, "strategy": key, "text": text})
     return variants
 
