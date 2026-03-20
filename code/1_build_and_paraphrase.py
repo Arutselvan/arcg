@@ -2,7 +2,7 @@
 ARCG Experiment  --  Step 1: Build Benchmark and Generate Paraphrases
 ======================================================================
 Loads 75 real problems (50 from GSM8K, 25 from ARC-Challenge), generates
-5 semantically-equivalent paraphrases per problem using deepseek-r1:70b,
+5 semantically-equivalent paraphrases per problem using deepseek-r1:32b,
 and saves the shared paraphrase dataset to data/paraphrases.json.
 
 This file is the single source of truth for all downstream scripts.
@@ -23,7 +23,7 @@ Requirements
 
   Ollama must be installed (https://ollama.com).
   This script starts the Ollama server automatically if it is not running
-  and pulls deepseek-r1:70b if it is not already available.
+  and pulls deepseek-r1:32b if it is not already available.
 
 Usage
 -----
@@ -49,13 +49,13 @@ from tqdm import tqdm
 # ---------------------------------------------------------------------------
 
 OLLAMA_URL        = "http://localhost:11434"
-PARAPHRASE_MODEL  = "deepseek-r1:70b"   # strong reasoning model for paraphrasing
+PARAPHRASE_MODEL  = "deepseek-r1:32b"   # strong reasoning model for paraphrasing
 N_MATH            = 50                  # problems from GSM8K
 N_LOGIC           = 25                  # problems from ARC-Challenge
 RANDOM_SEED       = 42
 DATA_DIR          = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 OUTPUT_FILE       = os.path.join(DATA_DIR, "paraphrases.json")
-REQUEST_TIMEOUT   = 360                 # seconds; 70B model can be slow
+REQUEST_TIMEOUT   = 300                 # seconds per request
 MAX_RETRIES       = 8                   # retries per paraphrase call
 WARMUP_TIMEOUT    = 300                 # seconds to wait for model warmup
 
@@ -133,7 +133,7 @@ def get_available_models() -> list[str]:
 def ensure_model(model: str):
     """Pull the model if it is not already available locally."""
     available = get_available_models()
-    # Match by prefix to handle tag variants (e.g. deepseek-r1:70b)
+    # Match by prefix to handle tag variants (e.g. deepseek-r1:32b)
     if any(m.startswith(model.split(":")[0]) and model.split(":")[-1] in m
            for m in available):
         print(f"  Model {model} is already available.")
@@ -146,10 +146,35 @@ def ensure_model(model: str):
     print(f"  {model} pulled successfully.")
 
 
+def unload_all_models():
+    """Unload all currently loaded models from GPU VRAM before switching."""
+    print("  Unloading all models from GPU memory...")
+    try:
+        r = requests.get(f"{OLLAMA_URL}/api/ps", timeout=5)
+        if r.status_code == 200:
+            loaded = r.json().get("models", [])
+            for m in loaded:
+                name = m.get("name", "")
+                if name:
+                    try:
+                        requests.post(
+                            f"{OLLAMA_URL}/api/generate",
+                            json={"model": name, "keep_alive": 0},
+                            timeout=30,
+                        )
+                        print(f"    Unloaded: {name}")
+                    except Exception:
+                        pass
+    except Exception:
+        pass
+    time.sleep(3)
+    print("  GPU memory cleared.")
+
+
 def warmup_model(model: str):
     """Send a trivial prompt and wait until the model responds successfully.
     This ensures the model is fully loaded into VRAM before real work begins.
-    A 70B model can take 30-120 seconds to load on first use.
+    A 32B model can take 20-60 seconds to load on first use.
     """
     print(f"  Warming up {model} (waiting for first successful response)...")
     payload = {
@@ -181,8 +206,9 @@ def warmup_model(model: str):
 
 
 def ensure_ollama_ready(model: str):
-    # Always restart Ollama with the correct env vars to ensure GPU is used
-    # and the RAM check does not block on buff/cache.
+    # Unload any resident model first to free VRAM, then restart with
+    # correct env vars to ensure GPU is used without RAM check issues.
+    unload_all_models()
     restart_ollama_server()
     ensure_model(model)
     warmup_model(model)

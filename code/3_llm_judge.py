@@ -5,14 +5,14 @@ Uses two strong reasoning models to independently judge whether each
 generated paraphrase is semantically equivalent to the original problem.
 
 Judge models:
-  Judge A: deepseek-r1:70b
+  Judge A: deepseek-r1:32b
   Judge B: qwen3:32b
 
 Each judge produces a structured verdict (VALID/INVALID) with a
 confidence score (1-5) and a brief justification for each paraphrase.
 
 Output files:
-  data/llm_judge_deepseek-r1-70b.json
+  data/llm_judge_deepseek-r1-32b.json
   data/llm_judge_qwen3-32b.json
 
 These files are consumed by 4_consolidate_validation.py together with
@@ -28,7 +28,7 @@ Requirements
 Usage
 -----
   python 3_llm_judge.py
-  python 3_llm_judge.py --judge deepseek-r1:70b   # run only one judge
+  python 3_llm_judge.py --judge deepseek-r1:32b   # run only one judge
   python 3_llm_judge.py --judge qwen3:32b
 """
 
@@ -52,7 +52,7 @@ DATA_DIR       = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", 
 PARAPHRASE_FILE = os.path.join(DATA_DIR, "paraphrases.json")
 
 JUDGE_MODELS = [
-    "deepseek-r1:70b",
+    "deepseek-r1:32b",
     "qwen3:32b",
 ]
 
@@ -135,7 +135,33 @@ def ensure_model(model: str):
     print(f"  {model} ready.")
 
 
+def unload_all_models():
+    """Unload all currently loaded models from GPU VRAM before switching."""
+    print("  Unloading all models from GPU memory...")
+    try:
+        r = requests.get(f"{OLLAMA_URL}/api/ps", timeout=5)
+        if r.status_code == 200:
+            loaded = r.json().get("models", [])
+            for m in loaded:
+                name = m.get("name", "")
+                if name:
+                    try:
+                        requests.post(
+                            f"{OLLAMA_URL}/api/generate",
+                            json={"model": name, "keep_alive": 0},
+                            timeout=30,
+                        )
+                        print(f"    Unloaded: {name}")
+                    except Exception:
+                        pass
+    except Exception:
+        pass
+    time.sleep(3)
+    print("  GPU memory cleared.")
+
+
 def ensure_ollama_ready(model: str):
+    unload_all_models()
     restart_ollama_server()
     ensure_model(model)
 
@@ -343,7 +369,7 @@ def main():
         "--judge",
         type=str,
         default=None,
-        help="Run only this judge model (e.g. deepseek-r1:70b). Default: run all.",
+        help="Run only this judge model (e.g. deepseek-r1:32b). Default: run all.",
     )
     args = parser.parse_args()
 

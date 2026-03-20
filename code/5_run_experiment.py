@@ -9,8 +9,8 @@ Models evaluated (all reasoning models, all fit on H100 80GB at Q4):
   1.  deepseek-r1:7b          DeepSeek R1 distill (Qwen base)
   2.  deepseek-r1:8b          DeepSeek R1 distill (Llama base)
   3.  deepseek-r1:14b         DeepSeek R1 distill
-  4.  deepseek-r1:32b         DeepSeek R1 distill
-  5.  deepseek-r1:70b         DeepSeek R1 distill (largest)
+  4.  deepseek-r1:32b         DeepSeek R1 distill (largest in DeepSeek R1 series)
+  5.  llama3.3:70b             Meta Llama 3.3 70B (replaces deepseek-r1:70b)
   6.  qwen3:8b                Qwen 3 8B (hybrid thinking)
   7.  qwen3:32b               Qwen 3 32B (hybrid thinking)
   8.  magistral:24b           Mistral reasoning model
@@ -40,7 +40,7 @@ Requirements
 Usage
 -----
   python 5_run_experiment.py
-  python 5_run_experiment.py --models deepseek-r1:7b deepseek-r1:8b
+  python 5_run_experiment.py --models deepseek-r1:7b deepseek-r1:8b deepseek-r1:32b
   python 5_run_experiment.py --skip-pull   # if models already downloaded
 """
 
@@ -63,19 +63,19 @@ OLLAMA_URL      = "http://localhost:11434"
 DATA_DIR        = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 INPUT_FILE      = os.path.join(DATA_DIR, "validated_paraphrases.json")
 OUTPUT_FILE     = os.path.join(DATA_DIR, "experiment_results.json")
-REQUEST_TIMEOUT = 600   # 70B models can be slow
+REQUEST_TIMEOUT = 480   # seconds per request
 
 EVAL_MODELS = [
     "deepseek-r1:7b",
     "deepseek-r1:8b",
     "deepseek-r1:14b",
     "deepseek-r1:32b",
-    "deepseek-r1:70b",
     "qwen3:8b",
     "qwen3:32b",
     "magistral:24b",
     "phi4-reasoning:14b",
     "glm-4.7-flash",
+    "llama3.3:70b",
 ]
 
 # Model family tags for extraction routing
@@ -85,6 +85,7 @@ MODEL_FAMILIES = {
     "magistral":   "mistral",
     "phi4":        "phi",
     "glm":         "glm",
+    "llama3.3":    "llama",
 }
 
 # ---------------------------------------------------------------------------
@@ -163,7 +164,36 @@ def ensure_model(model: str):
     print(f"  {model} ready.")
 
 
+def unload_all_models():
+    """Ask Ollama to unload all currently loaded models to free GPU VRAM.
+    Uses the /api/generate endpoint with keep_alive=0 for each loaded model.
+    Then restarts the server to ensure a clean slate.
+    """
+    print("  Unloading all models from GPU memory...")
+    try:
+        r = requests.get(f"{OLLAMA_URL}/api/ps", timeout=5)
+        if r.status_code == 200:
+            loaded = r.json().get("models", [])
+            for m in loaded:
+                name = m.get("name", "")
+                if name:
+                    try:
+                        requests.post(
+                            f"{OLLAMA_URL}/api/generate",
+                            json={"model": name, "keep_alive": 0},
+                            timeout=30,
+                        )
+                        print(f"    Unloaded: {name}")
+                    except Exception:
+                        pass
+    except Exception:
+        pass
+    time.sleep(3)  # Give Ollama time to release VRAM
+    print("  GPU memory cleared.")
+
+
 def ensure_ollama_ready(model: str, skip_pull: bool = False):
+    unload_all_models()
     restart_ollama_server()
     if not skip_pull:
         ensure_model(model)
