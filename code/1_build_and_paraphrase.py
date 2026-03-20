@@ -333,8 +333,10 @@ PARAPHRASE_STRATEGIES = {
           "it to a friend. Keep all numbers and logical constraints identical.",
     "P3": "Restate the problem using passive voice and a different sentence order. "
           "The meaning, numbers, and constraints must remain identical.",
-    "P4": "Break the problem into clearly numbered sub-steps or sub-questions that together "
-          "ask for the same final answer. Do not solve it.",
+    "P4": "Rewrite the problem by splitting the scenario into clearly numbered sub-questions "
+          "that together lead to the same final answer. Each sub-question should ask for an "
+          "intermediate quantity needed to reach the answer. Do NOT compute any values, do NOT "
+          "show any arithmetic, and do NOT reveal the answer. The output must still be a question.",
     "P5": "Restate the problem using a completely different real-world context or analogy "
           "(e.g., change a shopping scenario to a farming scenario) while preserving the "
           "identical mathematical or logical structure and the same correct answer.",
@@ -342,23 +344,33 @@ PARAPHRASE_STRATEGIES = {
 
 
 def build_paraphrase_prompt(problem: dict, strategy_key: str, strategy_desc: str) -> str:
-    domain_hint = (
-        "This is a mathematical word problem. The correct numerical answer must be preserved."
-        if problem["domain"] == "math"
-        else "This is a multiple-choice logical reasoning question. "
-             "The answer choices and correct answer letter must be preserved exactly."
-    )
+    if problem["domain"] == "math":
+        domain_rules = (
+            "This is a mathematical word problem. "
+            "The correct numerical answer MUST remain identical to the original. "
+            "Do NOT compute, reveal, or hint at the answer anywhere in your output."
+        )
+    else:
+        domain_rules = (
+            "This is a multiple-choice logical reasoning question. "
+            "All answer choices (A, B, C, D, E) and the correct answer letter MUST be preserved exactly. "
+            "Do NOT compute, reveal, or hint at the correct choice anywhere in your output."
+        )
     return (
-        f"You are a careful linguistic expert. Your task is to paraphrase the following problem.\n\n"
-        f"PARAPHRASE STRATEGY ({strategy_key}): {strategy_desc}\n\n"
-        f"IMPORTANT RULES:\n"
-        f"1. The paraphrase must be semantically equivalent -- the correct answer must not change.\n"
-        f"2. {domain_hint}\n"
-        f"3. Do NOT solve the problem.\n"
-        f"4. Do NOT add hints or extra information.\n"
-        f"5. Output ONLY the paraphrased problem text. No explanation, no preamble.\n\n"
+        f"You are a linguistic rewriting expert. "
+        f"Your ONLY job is to rewrite the problem statement using the strategy below. "
+        f"You must NOT solve the problem, show working, or reveal the answer in any form.\n\n"
+        f"REWRITING STRATEGY ({strategy_key}): {strategy_desc}\n\n"
+        f"STRICT RULES -- violating any rule makes your output invalid:\n"
+        f"1. Output ONLY the rewritten problem text. No preamble, no explanation, no commentary.\n"
+        f"2. Do NOT solve the problem. Do NOT show any calculations or reasoning steps.\n"
+        f"3. Do NOT include the answer, the solution, or any numerical result in your output.\n"
+        f"4. The rewritten problem must be answerable and must have the SAME correct answer as the original.\n"
+        f"5. {domain_rules}\n"
+        f"6. Keep all quantities, names, and relationships intact -- only the wording changes.\n"
+        f"7. The output must end with a question mark (it is still a question).\n\n"
         f"ORIGINAL PROBLEM:\n{problem['question']}\n\n"
-        f"PARAPHRASED VERSION:"
+        f"REWRITTEN PROBLEM (question only, no solution):"
     )
 
 
@@ -390,6 +402,27 @@ def call_ollama(prompt: str, model: str) -> str:
             text = r.json()["response"].strip()
             # Strip <think>...</think> blocks (DeepSeek R1 reasoning traces)
             text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
+            # Reject responses that look like solved answers rather than questions.
+            # A valid paraphrase must end with a question mark and must not contain
+            # step-by-step solution markers.
+            solution_markers = [
+                "step-by-step explanation", "step-by-step",
+                "step 1:", "step 2:", "step 3:",
+                "therefore,", "therefore the",
+                "the answer is", "the final answer",
+                "thus,", "thus the",
+                "so the answer", "so johnny", "so mike",
+                "solution:", "answer:",
+                "explanation:", "working:",
+                "calculate:", "compute:",
+                "= (",             # e.g. "= (3 x 5)"
+            ]
+            lower = text.lower()
+            is_solution = any(m in lower for m in solution_markers)
+            if is_solution:
+                print(f"    [attempt {attempt+1}/{MAX_RETRIES}] Response looks like a solution, not a paraphrase. Retrying...")
+                time.sleep(5)
+                continue
             return text
         except requests.exceptions.Timeout:
             wait = 15
