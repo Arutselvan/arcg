@@ -192,12 +192,33 @@ def gpu_cleanup():
         subprocess.run(["pkill", sig, "-f", "ollama"], check=False)
     time.sleep(3)
 
-    # Step 3: Kill stray processes holding CUDA contexts
+    # Step 3: Kill stray processes by name
     for proc_name in ["ollama runner", "ollama_llama_server"]:
         subprocess.run(["pkill", "-9", "-f", proc_name], check=False)
     time.sleep(2)
 
-    # Step 4: Reset CUDA primary contexts via ctypes
+    # Step 4: Use fuser to kill any process holding /dev/nvidia* device files
+    print("    [GPU cleanup] Scanning /dev/nvidia* for processes holding GPU device files...")
+    gpu_devices = ["/dev/nvidia0", "/dev/nvidiactl", "/dev/nvidia-uvm",
+                   "/dev/nvidia-modeset", "/dev/nvidia-uvm-tools"]
+    killed_pids = set()
+    for dev in gpu_devices:
+        try:
+            result = subprocess.run(["fuser", dev], capture_output=True, text=True, check=False)
+            for pid in result.stdout.strip().split():
+                pid = pid.strip()
+                if pid and pid not in killed_pids:
+                    subprocess.run(["kill", "-9", pid], check=False)
+                    print(f"    [GPU cleanup] Killed PID {pid} holding {dev}")
+                    killed_pids.add(pid)
+        except Exception:
+            pass
+    if killed_pids:
+        time.sleep(3)
+    else:
+        print("    [GPU cleanup] No processes found holding GPU device files.")
+
+    # Step 5: Reset CUDA primary contexts via ctypes
     try:
         import ctypes
         libcuda = None
@@ -215,13 +236,13 @@ def gpu_cleanup():
                 device = ctypes.c_int(0)
                 libcuda.cuDeviceGet(ctypes.byref(device), i)
                 ret = libcuda.cuDevicePrimaryCtxReset(device)
-                print(f"    [GPU cleanup] cuDevicePrimaryCtxReset(GPU {i}) = {ret} (0=success)")
+                print(f"    [GPU cleanup] cuDevicePrimaryCtxReset(GPU {i}) = {ret} (0=success, 201=not owner)")
         else:
             print("    [GPU cleanup] libcuda.so not found; skipping ctypes reset.")
     except Exception as exc:
         print(f"    [GPU cleanup] ctypes CUDA reset skipped: {exc}")
 
-    # Step 5: Try nvidia-smi --gpu-reset (bare metal only)
+    # Step 6: Try nvidia-smi --gpu-reset (bare metal only)
     try:
         result = subprocess.run(["nvidia-smi", "--gpu-reset", "-i", "0"],
                                 capture_output=True, text=True, timeout=30, check=False)
@@ -232,7 +253,21 @@ def gpu_cleanup():
     except Exception:
         pass
 
-    # Step 6: Verify VRAM
+    # Step 7: Try unloading nvidia_uvm kernel module
+    try:
+        r = subprocess.run(["sudo", "rmmod", "nvidia_uvm"],
+                           capture_output=True, text=True, timeout=15, check=False)
+        if r.returncode == 0:
+            print("    [GPU cleanup] nvidia_uvm unloaded.")
+            time.sleep(2)
+            subprocess.run(["sudo", "modprobe", "nvidia_uvm"], check=False)
+            print("    [GPU cleanup] nvidia_uvm reloaded.")
+        else:
+            print(f"    [GPU cleanup] rmmod nvidia_uvm: {r.stderr.strip()[:80]}")
+    except Exception:
+        pass
+
+    # Step 8: Verify VRAM
     time.sleep(5)
     try:
         result = subprocess.run(
