@@ -451,10 +451,11 @@ PARAPHRASE_STRATEGIES = {
           "it to a friend. Keep all numbers and logical constraints identical.",
     "P3": "Restate the problem using passive voice and a different sentence order. "
           "The meaning, numbers, and constraints must remain identical.",
-    "P4": "Rewrite the problem by splitting the scenario into clearly numbered sub-questions "
-          "that together lead to the same final answer. Each sub-question should ask for an "
-          "intermediate quantity needed to reach the answer. Do NOT compute any values, do NOT "
-          "show any arithmetic, and do NOT reveal the answer. The output must still be a question.",
+    "P4": "Rewrite the problem by changing the surface form of how quantities are expressed: "
+          "use indirect references, relative comparisons, or embedded clauses instead of "
+          "direct statements (e.g. 'twice as many as' instead of a direct number, or "
+          "'the remainder after' instead of subtraction). The mathematical structure and "
+          "correct answer must remain identical. Output a single self-contained question.",
     "P5": "Restate the problem using a completely different real-world context or analogy "
           "(e.g., change a shopping scenario to a farming scenario) while preserving the "
           "identical mathematical or logical structure and the same correct answer.",
