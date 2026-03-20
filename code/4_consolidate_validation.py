@@ -4,7 +4,7 @@ ARCG Experiment  --  Step 4: Consolidate Validation Reports
 Merges the four validation sources:
   - Human Annotator 1:  data/human_validation_annotator1.xlsx  (filled)
   - Human Annotator 2:  data/human_validation_annotator2.xlsx  (filled)
-  - LLM Judge A:        data/llm_judge_deepseek-r1-70b.json
+  - LLM Judge A:        data/llm_judge_deepseek-r1-32b.json
   - LLM Judge B:        data/llm_judge_qwen3-32b.json
 
 For each paraphrase, computes:
@@ -47,7 +47,7 @@ HUMAN_FILES = [
 ]
 
 LLM_JUDGE_FILES = [
-    os.path.join(DATA_DIR, "llm_judge_deepseek-r1-70b.json"),
+    os.path.join(DATA_DIR, "llm_judge_deepseek-r1-32b.json"),
     os.path.join(DATA_DIR, "llm_judge_qwen3-32b.json"),
 ]
 
@@ -181,7 +181,7 @@ def main():
 
     # Load all four sources
     source_labels = [
-        "Human-1", "Human-2", "LLM-DeepSeek-R1-70B", "LLM-Qwen3-32B"
+        "Human-1", "Human-2", "LLM-DeepSeek-R1-32B", "LLM-Qwen3-32B"
     ]
     sources = []
 

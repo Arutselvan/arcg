@@ -10,7 +10,7 @@ Models evaluated (all reasoning models, all fit on H100 80GB at Q4):
   2.  deepseek-r1:8b          DeepSeek R1 distill (Llama base)
   3.  deepseek-r1:14b         DeepSeek R1 distill
   4.  deepseek-r1:32b         DeepSeek R1 distill (largest in DeepSeek R1 series)
-  5.  llama3.3:70b             Meta Llama 3.3 70B (replaces deepseek-r1:70b)
+  5.  qwen3:30b               Qwen 3 30B (dense reasoning, replaces deepseek-r1:70b)
   6.  qwen3:8b                Qwen 3 8B (hybrid thinking)
   7.  qwen3:32b               Qwen 3 32B (hybrid thinking)
   8.  magistral:24b           Mistral reasoning model
@@ -70,12 +70,12 @@ EVAL_MODELS = [
     "deepseek-r1:8b",
     "deepseek-r1:14b",
     "deepseek-r1:32b",
+    "qwen3:30b",
     "qwen3:8b",
     "qwen3:32b",
     "magistral:24b",
     "phi4-reasoning:14b",
     "glm-4.7-flash",
-    "llama3.3:70b",
 ]
 
 # Model family tags for extraction routing
@@ -85,7 +85,6 @@ MODEL_FAMILIES = {
     "magistral":   "mistral",
     "phi4":        "phi",
     "glm":         "glm",
-    "llama3.3":    "llama",
 }
 
 # ---------------------------------------------------------------------------

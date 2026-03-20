@@ -79,7 +79,7 @@ MODEL_META = {
     "deepseek-r1:8b":        {"label": "DS-R1-8B",    "params": 8,   "family": "DeepSeek R1"},
     "deepseek-r1:14b":       {"label": "DS-R1-14B",   "params": 14,  "family": "DeepSeek R1"},
     "deepseek-r1:32b":       {"label": "DS-R1-32B",   "params": 32,  "family": "DeepSeek R1"},
-    "deepseek-r1:70b":       {"label": "DS-R1-70B",   "params": 70,  "family": "DeepSeek R1"},
+    "qwen3:30b":             {"label": "Qwen3-30B",   "params": 30,  "family": "Qwen 3"},
     "qwen3:8b":              {"label": "Qwen3-8B",    "params": 8,   "family": "Qwen 3"},
     "qwen3:32b":             {"label": "Qwen3-32B",   "params": 32,  "family": "Qwen 3"},
     "magistral:24b":         {"label": "Magistral-24B","params": 24, "family": "Mistral"},
