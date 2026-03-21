@@ -388,23 +388,34 @@ def ensure_ollama_ready(model: str, skip_pull: bool = False):
 # ---------------------------------------------------------------------------
 
 MATH_SYSTEM = (
-    "You are an expert mathematician. Solve the problem step by step. "
-    "At the end of your solution, write your final answer on its own line "
-    "in the format:\nANSWER: <number>\n"
-    "Use only digits and a decimal point if needed. No units, no commas."
+    "You are a concise math solver. "
+    "Think briefly, then write your final answer OUTSIDE the think block "
+    "in this exact format on its own line:\nANSWER: <number>\n"
+    "Use only digits and a decimal point if needed. No units, no commas. "
+    "Do NOT continue writing after the ANSWER line."
 )
 
 LOGIC_SYSTEM = (
-    "You are an expert at logical reasoning. Analyse the problem step by step. "
-    "At the end of your analysis, write your final answer on its own line "
-    "in the format:\nANSWER: <letter>\n"
-    "The letter must be one of the answer choice labels (e.g. A, B, C, D)."
+    "You are a concise logical reasoner. "
+    "Think briefly, then write your final answer OUTSIDE the think block "
+    "in this exact format on its own line:\nANSWER: <letter>\n"
+    "The letter must be one of the answer choice labels (e.g. A, B, C, D). "
+    "Do NOT continue writing after the ANSWER line."
+)
+
+# Suffix appended to every prompt to reinforce the stop condition
+_PROMPT_SUFFIX = (
+    "\n\nIMPORTANT: After your reasoning, write ONE line: ANSWER: <value>  "
+    "Then stop immediately."
 )
 
 
 def build_eval_prompt(problem: dict, paraphrase_text: str) -> str:
     system = MATH_SYSTEM if problem["domain"] == "math" else LOGIC_SYSTEM
-    return f"{system}\n\nPROBLEM:\n{paraphrase_text}\n\nPlease solve the problem above and write your final answer in the required format."
+    return (
+        f"{system}\n\nPROBLEM:\n{paraphrase_text}\n\n"
+        f"Solve the problem above.{_PROMPT_SUFFIX}"
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -419,32 +430,18 @@ def get_model_family(model: str) -> str:
 
 
 def strip_thinking_traces(text: str) -> str:
-    """Remove <think>...</think> blocks and return the answer portion.
+    """Return only the text OUTSIDE <think>...</think> blocks.
 
-    Priority:
-    1. Text AFTER </think> tag -- this is the model's explicit answer section.
-    2. If response field was empty (model truncated inside <think>), use the
-       LAST 2000 characters of the think block -- the model's most recent
-       reasoning is closest to the final answer, so extractors find the right
-       number there rather than an intermediate step from the middle.
-    3. If no think tags at all, return the text as-is.
+    We intentionally do NOT fall back to searching inside the think block.
+    The prompt now instructs the model to write ANSWER: outside the think
+    block, so if there is nothing outside it means the model failed to
+    produce an answer and we should return empty (counted as wrong).
     """
-    # Step 1: extract text after </think>
+    # Remove all <think>...</think> blocks (including unclosed ones)
     after_think = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
+    # Also strip any stray opening/closing think tags
     after_think = re.sub(r"</?think[^>]*>", "", after_think).strip()
-    if after_think:
-        return after_think
-
-    # Step 2: fallback -- use the LAST 2000 chars of the think block
-    # (the model's most recent reasoning, closest to the conclusion)
-    inside = re.search(r"<think>(.*?)(?:</think>|$)", text, flags=re.DOTALL)
-    if inside:
-        think_content = inside.group(1).strip()
-        # Return last 2000 chars so extractors see the final conclusion,
-        # not intermediate steps from the beginning of the reasoning trace
-        return think_content[-2000:]
-
-    return text.strip()
+    return after_think
 
 
 def extract_answer_math(text: str) -> str:
@@ -630,9 +627,9 @@ def call_ollama(prompt: str, model: str) -> tuple[str, float]:
         "num_predict": 8192,     # allow up to 8k tokens total (thinking + answer)
         "num_ctx":     16384,    # 16k context window
         "seed":        42,
-        # NOTE: do NOT set thinking_budget -- it cuts the model off mid-thought
-        # leaving an empty response field. Instead we extract from the end of
-        # the think block as a fallback (see strip_thinking_traces).
+        # No stop tokens -- the prompt instructs the model to stop after
+        # writing ANSWER: <value>. Stop tokens fire too early (\n\n appears
+        # inside reasoning) or too late / not at all for thinking models.
     }
     t0 = time.time()
     max_attempts = 8
