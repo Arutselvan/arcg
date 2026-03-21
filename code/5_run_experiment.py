@@ -372,7 +372,9 @@ def extract_answer_math(text: str) -> str:
     # Strategy 1: ANSWER: tag
     m = re.search(r"ANSWER\s*:\s*([\-\d,\.\s/]+)", text, re.IGNORECASE)
     if m:
-        return m.group(1).replace(",", "").strip().split()[0]
+        parts = m.group(1).replace(",", "").strip().split()
+        if parts:
+            return parts[0]
 
     # Strategy 2: "the answer is X" or "equals X"
     m = re.search(
