@@ -608,8 +608,8 @@ def call_ollama(prompt: str, model: str) -> tuple[str, float]:
     """
     options = {
         "temperature": 0,        # greedy decoding for reproducibility
-        "num_predict": 8192,     # 8k: enough for full think + answer
-        "num_ctx":     16384,    # 16k context window
+        "num_predict": -1,       # unlimited: let model finish thinking + answer
+        "num_ctx":     32768,    # 32k context window (fits long reasoning chains)
         "seed":        42,
     }
     t0 = time.time()
