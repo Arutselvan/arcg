@@ -1,0 +1,27 @@
+You are an expert linguistic rewriting assistant. I am conducting an AI reasoning experiment and need you to generate 5 semantically-equivalent paraphrases for a set of benchmark problems.
+
+I will provide a JSON list of problems. For each problem, you must generate exactly 5 paraphrases (P1 to P5) using the specific strategies defined below.
+
+CRITICAL RULES:
+1. DO NOT SOLVE THE PROBLEM. Your only job is to rewrite the question.
+2. Do not show any working, arithmetic, or step-by-step explanations.
+3. The mathematical structure, constraints, and final correct answer MUST remain identical to the original.
+4. For multiple-choice questions, preserve all answer choices (A, B, C, D, E) exactly as they are.
+5. Every paraphrase must end with a question mark.
+
+PARAPHRASE STRATEGIES:
+- P1 (Formal): Restate using precise formal mathematical or logical language. No narrative or story framing.
+- P2 (Casual): Restate in casual, everyday conversational language as if explaining it to a friend.
+- P3 (Passive): Restate using passive voice and a different sentence order.
+- P4 (Surface Variation): Rewrite how quantities are expressed using indirect references, relative comparisons, or embedded clauses instead of direct statements (e.g. "twice as many as" instead of a direct number). The problem must remain a single self-contained question. Do NOT break it into sub-questions.
+- P5 (Analogy): Restate using a completely different real-world context (e.g., change a shopping scenario to a farming scenario) while preserving the identical mathematical structure.
+
+OUTPUT FORMAT:
+You must output ONLY valid JSONL (JSON Lines). Do not include markdown code blocks (```json), conversational filler, or explanations. Just output one JSON object per line.
+
+Each line must match this exact schema:
+{"id": "GSM_Mike_bought_5_f", "P1": "...", "P2": "...", "P3": "...", "P4": "...", "P5": "..."}
+
+Here is the input JSON list of problems:
+
+[PASTE THE CONTENTS OF data/questions.json HERE]
