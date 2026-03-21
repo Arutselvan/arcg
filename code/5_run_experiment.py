@@ -469,20 +469,46 @@ def call_ollama(prompt: str, model: str) -> tuple[str, float]:
         },
     }
     t0 = time.time()
-    for attempt in range(3):
+    max_attempts = 8
+    for attempt in range(max_attempts):
         try:
             r = requests.post(
                 f"{OLLAMA_URL}/api/generate",
                 json=payload,
                 timeout=REQUEST_TIMEOUT,
             )
+            if r.status_code == 500:
+                err_msg = ""
+                try:
+                    err_msg = r.json().get("error", r.text[:120])
+                except Exception:
+                    err_msg = r.text[:120]
+                wait = min(60, 5 * (attempt + 1))
+                print(f"    [attempt {attempt+1}/{max_attempts}] HTTP 500: {err_msg}. Retry in {wait}s...")
+                if attempt == max_attempts // 2:
+                    print("    [attempt] Half retries exhausted — restarting Ollama server...")
+                    restart_ollama_server()
+                    ensure_model(model)
+                time.sleep(wait)
+                continue
             r.raise_for_status()
+            resp_text = r.json().get("response", "").strip()
+            if not resp_text:
+                wait = 5
+                print(f"    [attempt {attempt+1}/{max_attempts}] Empty response from model. Retry in {wait}s...")
+                time.sleep(wait)
+                continue
             elapsed = time.time() - t0
-            return r.json()["response"].strip(), elapsed
-        except Exception as exc:
-            wait = 2 ** attempt
-            print(f"    [attempt {attempt+1}/3] {exc}. Retry in {wait}s...")
+            return resp_text, elapsed
+        except requests.exceptions.Timeout:
+            wait = 15
+            print(f"    [attempt {attempt+1}/{max_attempts}] Request timed out. Retry in {wait}s...")
             time.sleep(wait)
+        except Exception as exc:
+            wait = min(30, 5 * (attempt + 1))
+            print(f"    [attempt {attempt+1}/{max_attempts}] {type(exc).__name__}: {exc}. Retry in {wait}s...")
+            time.sleep(wait)
+    print(f"    ERROR: All {max_attempts} attempts failed for model={model}. Returning empty response.")
     return "", time.time() - t0
 
 # ---------------------------------------------------------------------------
