@@ -218,7 +218,24 @@ def gpu_cleanup():
     else:
         print("    [GPU cleanup] No processes found holding GPU device files.")
 
-    # Step 5: Reset CUDA primary contexts via ctypes
+    # Step 5a: Python torch CUDA cache clear (if torch is installed)
+    try:
+        import gc
+        gc.collect()
+        import torch
+        if torch.cuda.is_available():
+            for i in range(torch.cuda.device_count()):
+                with torch.cuda.device(i):
+                    torch.cuda.empty_cache()
+                    torch.cuda.ipc_collect()
+                    torch.cuda.synchronize()
+            print(f"    [GPU cleanup] torch.cuda.empty_cache() cleared on {torch.cuda.device_count()} device(s).")
+    except ImportError:
+        pass
+    except Exception as exc:
+        print(f"    [GPU cleanup] torch CUDA clear skipped: {exc}")
+
+    # Step 5b: Reset CUDA primary contexts via ctypes
     try:
         import ctypes
         libcuda = None
