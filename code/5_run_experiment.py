@@ -351,10 +351,25 @@ def get_model_family(model: str) -> str:
 
 
 def strip_thinking_traces(text: str) -> str:
-    """Remove <think>...</think> blocks used by DeepSeek R1 and some Qwen models."""
-    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
-    # Also strip /think or similar variants
-    text = re.sub(r"</?think[^>]*>", "", text)
+    """Remove <think>...</think> blocks used by DeepSeek R1 and some Qwen models.
+
+    Preserves the text AFTER the closing </think> tag, which is the actual answer.
+    If the response is only a <think> block with nothing after it, returns the
+    content inside the think block as a fallback so answer extraction can still
+    find numbers/letters within the reasoning trace.
+    """
+    # Extract the part after </think> first
+    after_think = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
+    after_think = re.sub(r"</?think[^>]*>", "", after_think).strip()
+
+    if after_think:
+        return after_think
+
+    # Fallback: nothing after </think> — extract content inside <think> block
+    inside = re.search(r"<think>(.*?)</think>", text, flags=re.DOTALL)
+    if inside:
+        return inside.group(1).strip()
+
     return text.strip()
 
 
@@ -461,7 +476,6 @@ def call_ollama(prompt: str, model: str) -> tuple[str, float]:
         "model":  model,
         "prompt": prompt,
         "stream": False,
-        "think":  False,            # disable <think> block; get direct answer output
         "options": {
             "temperature": 0,       # greedy decoding for reproducibility
             "num_predict": 4096,    # allow full reasoning chain + answer
