@@ -419,24 +419,30 @@ def get_model_family(model: str) -> str:
 
 
 def strip_thinking_traces(text: str) -> str:
-    """Remove <think>...</think> blocks used by DeepSeek R1 and some Qwen models.
+    """Remove <think>...</think> blocks and return the answer portion.
 
-    Preserves the text AFTER the closing </think> tag, which is the actual answer.
-    If the response is only a <think> block with nothing after it, returns the
-    content inside the think block as a fallback so answer extraction can still
-    find numbers/letters within the reasoning trace.
+    Priority:
+    1. Text AFTER </think> tag -- this is the model's explicit answer section.
+    2. If response field was empty (model truncated inside <think>), use the
+       LAST 2000 characters of the think block -- the model's most recent
+       reasoning is closest to the final answer, so extractors find the right
+       number there rather than an intermediate step from the middle.
+    3. If no think tags at all, return the text as-is.
     """
-    # Extract the part after </think> first
+    # Step 1: extract text after </think>
     after_think = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
     after_think = re.sub(r"</?think[^>]*>", "", after_think).strip()
-
     if after_think:
         return after_think
 
-    # Fallback: nothing after </think> — extract content inside <think> block
-    inside = re.search(r"<think>(.*?)</think>", text, flags=re.DOTALL)
+    # Step 2: fallback -- use the LAST 2000 chars of the think block
+    # (the model's most recent reasoning, closest to the conclusion)
+    inside = re.search(r"<think>(.*?)(?:</think>|$)", text, flags=re.DOTALL)
     if inside:
-        return inside.group(1).strip()
+        think_content = inside.group(1).strip()
+        # Return last 2000 chars so extractors see the final conclusion,
+        # not intermediate steps from the beginning of the reasoning trace
+        return think_content[-2000:]
 
     return text.strip()
 
@@ -621,13 +627,12 @@ def call_ollama(prompt: str, model: str) -> tuple[str, float]:
     """
     options = {
         "temperature": 0,        # greedy decoding for reproducibility
-        "num_predict": 4096,     # cap total output tokens (thinking + answer)
-        "num_ctx":     16384,    # 16k context: prompt (~200 tok) + 4k output fits easily
+        "num_predict": 8192,     # allow up to 8k tokens total (thinking + answer)
+        "num_ctx":     16384,    # 16k context window
         "seed":        42,
-        # Ollama >=0.6 thinking-budget option: cap tokens spent inside <think>
-        # so the model is forced to stop reasoning and write the answer.
-        # 3000 tokens of thinking (~2-3 min) leaves 1096 tokens for the answer.
-        "thinking_budget": 3000,
+        # NOTE: do NOT set thinking_budget -- it cuts the model off mid-thought
+        # leaving an empty response field. Instead we extract from the end of
+        # the think block as a fallback (see strip_thinking_traces).
     }
     t0 = time.time()
     max_attempts = 8
