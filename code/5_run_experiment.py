@@ -461,7 +461,8 @@ def call_ollama(prompt: str, model: str) -> tuple[str, float]:
         "stream": False,
         "options": {
             "temperature": 0,       # greedy decoding for reproducibility
-            "num_predict": 1024,    # enough for CoT + answer
+            "num_predict": 4096,    # allow full reasoning chain + answer
+            "num_ctx":     8192,    # override Ollama's VRAM-based auto-ctx (262K)
             "seed":        42,
         },
     }

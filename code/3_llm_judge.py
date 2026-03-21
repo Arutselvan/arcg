@@ -349,7 +349,8 @@ def call_ollama(prompt: str, model: str) -> str:
         "stream": False,
         "options": {
             "temperature": 0.0,   # deterministic judgments
-            "num_predict": 256,
+            "num_predict": 4096,  # allow full reasoning chain before verdict
+            "num_ctx":     8192,  # override Ollama's VRAM-based auto-ctx (262K)
         },
     }
     max_attempts = 8

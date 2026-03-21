@@ -325,7 +325,7 @@ def warmup_model(model: str):
         "model":  model,
         "prompt": "Reply with the single word: ready",
         "stream": False,
-        "options": {"num_predict": 8, "temperature": 0.0},
+        "options": {"num_predict": 8, "temperature": 0.0, "num_ctx": 8192},
     }
     deadline = time.time() + WARMUP_TIMEOUT
     attempt  = 0
@@ -525,7 +525,8 @@ def call_ollama(prompt: str, model: str) -> str:
         "stream": False,
         "options": {
             "temperature": 0.3,   # slight creativity for paraphrasing
-            "num_predict": 512,
+            "num_predict": 4096,  # allow full reasoning chain + paraphrase output
+            "num_ctx":     8192,  # override Ollama's VRAM-based auto-ctx (262K)
         },
     }
     for attempt in range(MAX_RETRIES):
