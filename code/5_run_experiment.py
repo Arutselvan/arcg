@@ -599,39 +599,73 @@ def _call_ollama_stream(prompt: str, model: str, options: dict) -> str:
 def call_ollama(prompt: str, model: str) -> tuple[str, float]:
     """Returns (response_text, elapsed_seconds).
 
-    Uses streaming mode so that every token (including <think> blocks) is
-    captured.  Falls back to non-streaming on the last attempt.
+    Uses non-streaming mode (confirmed working).  Collects BOTH the
+    'response' field (answer after </think>) and the 'thinking' field
+    (tokens inside <think>) so the full CoT trace is preserved.
+
+    num_predict=8192 gives deepseek-r1:7b enough budget to finish its
+    thinking chain AND write the ANSWER line (4096 was too short).
     """
     options = {
-        "temperature": 0,       # greedy decoding for reproducibility
-        "num_predict": 4096,    # allow full reasoning chain + answer
-        "num_ctx":     8192,    # override Ollama's VRAM-based auto-ctx (262K)
+        "temperature": 0,        # greedy decoding for reproducibility
+        "num_predict": 8192,     # 8k: enough for full think + answer
+        "num_ctx":     16384,    # 16k context window
         "seed":        42,
     }
     t0 = time.time()
     max_attempts = 8
     for attempt in range(max_attempts):
-        use_stream = (attempt < max_attempts - 1)  # last attempt: non-stream
         try:
-            if use_stream:
-                resp_text = _call_ollama_stream(prompt, model, options)
+            payload = {
+                "model":  model,
+                "prompt": prompt,
+                "stream": False,
+                "options": options,
+            }
+            r = requests.post(
+                f"{OLLAMA_URL}/api/generate",
+                json=payload,
+                timeout=REQUEST_TIMEOUT,
+            )
+            if r.status_code == 500:
+                err = r.text[:200]
+                wait = min(60, 5 * (attempt + 1))
+                print(f"    [attempt {attempt+1}/{max_attempts}] HTTP 500: {err}. Retry in {wait}s...")
+                if attempt == max_attempts // 2:
+                    restart_ollama_server()
+                    ensure_model(model)
+                time.sleep(wait)
+                continue
+            r.raise_for_status()
+            data = r.json()
+
+            # Ollama >=0.6 splits thinking models into two fields:
+            #   'thinking' = tokens inside <think> block
+            #   'response' = tokens after </think> (the actual answer)
+            # Older versions put everything into 'response'.
+            # We collect both so the full CoT trace is preserved.
+            thinking = data.get("thinking", "").strip()
+            response = data.get("response", "").strip()
+
+            if thinking and response:
+                resp_text = f"<think>{thinking}</think>\n{response}"
+            elif response:
+                resp_text = response
+            elif thinking:
+                # Model ran out of num_predict inside <think> — no answer yet.
+                # Return thinking so strip_thinking_traces fallback can search it.
+                resp_text = f"<think>{thinking}</think>"
             else:
-                # Final fallback: non-streaming
-                payload = {"model": model, "prompt": prompt,
-                           "stream": False, "options": options}
-                r = requests.post(
-                    f"{OLLAMA_URL}/api/generate",
-                    json=payload, timeout=REQUEST_TIMEOUT)
-                r.raise_for_status()
-                resp_text = r.json().get("response", "").strip()
+                resp_text = ""
 
             if resp_text:
                 elapsed = time.time() - t0
                 return resp_text, elapsed
 
             wait = 5
-            print(f"    [attempt {attempt+1}/{max_attempts}] Empty response "
-                  f"({'stream' if use_stream else 'non-stream'}). Retry in {wait}s...")
+            print(f"    [attempt {attempt+1}/{max_attempts}] Empty response. "
+                  f"eval_count={data.get('eval_count')} done_reason={data.get('done_reason')}. "
+                  f"Retry in {wait}s...")
             if attempt == max_attempts // 2:
                 print("    [attempt] Half retries exhausted — restarting Ollama server...")
                 restart_ollama_server()
