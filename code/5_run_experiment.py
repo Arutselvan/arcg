@@ -336,7 +336,7 @@ LOGIC_SYSTEM = (
 
 def build_eval_prompt(problem: dict, paraphrase_text: str) -> str:
     system = MATH_SYSTEM if problem["domain"] == "math" else LOGIC_SYSTEM
-    return f"{system}\n\nPROBLEM:\n{paraphrase_text}\n\nSOLUTION:"
+    return f"{system}\n\nPROBLEM:\n{paraphrase_text}\n\nPlease solve the problem above and write your final answer in the required format."
 
 
 # ---------------------------------------------------------------------------
@@ -461,6 +461,7 @@ def call_ollama(prompt: str, model: str) -> tuple[str, float]:
         "model":  model,
         "prompt": prompt,
         "stream": False,
+        "think":  False,            # disable <think> block; get direct answer output
         "options": {
             "temperature": 0,       # greedy decoding for reproducibility
             "num_predict": 4096,    # allow full reasoning chain + answer
