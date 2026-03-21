@@ -465,10 +465,10 @@ def extract_answer_math(text: str) -> str:
             return parts[0]
 
     # Strategy 2: LaTeX boxed (last occurrence) -- very reliable signal
-    # Match both \boxed{X} (1 backslash) and \\boxed{X} (2 backslashes, from
-    # double-escaped JSON storage) so this works regardless of how the string
-    # was loaded.
-    matches = re.findall(r"\\{1,2}boxed\{([\-\d,\.]+)\}", text)
+    # The response field from Ollama contains a literal backslash before 'boxed'
+    # (i.e. the Python string is r'\boxed{14}' == '\\boxed{14}').
+    # We match any number of backslashes (1-4) before 'boxed' to be safe.
+    matches = re.findall(r"\\+boxed\{([\-\d,\.]+)\}", text)
     if matches:
         return matches[-1].replace(",", "").strip()
 
@@ -621,9 +621,13 @@ def call_ollama(prompt: str, model: str) -> tuple[str, float]:
     """
     options = {
         "temperature": 0,        # greedy decoding for reproducibility
-        "num_predict": -1,       # unlimited: let model finish thinking + answer
-        "num_ctx":     32768,    # 32k context window (fits long reasoning chains)
+        "num_predict": 4096,     # cap total output tokens (thinking + answer)
+        "num_ctx":     16384,    # 16k context: prompt (~200 tok) + 4k output fits easily
         "seed":        42,
+        # Ollama >=0.6 thinking-budget option: cap tokens spent inside <think>
+        # so the model is forced to stop reasoning and write the answer.
+        # 3000 tokens of thinking (~2-3 min) leaves 1096 tokens for the answer.
+        "thinking_budget": 3000,
     }
     t0 = time.time()
     max_attempts = 8
