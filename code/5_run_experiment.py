@@ -310,8 +310,40 @@ def gpu_cleanup():
 
 
 def ensure_ollama_ready(model: str, skip_pull: bool = False):
+    """Prepare Ollama for the next model.
+
+    Always runs GPU cleanup (unloads previous model from VRAM).
+    Only restarts the Ollama server if it is not already running.
+    Never kills a working Ollama process — restarting it breaks the
+    CUDA environment that was set up when the user launched it manually.
+    """
+    # Step 1: Gracefully unload all currently-loaded models to free VRAM
+    if is_ollama_running():
+        print("  [setup] Unloading previous models from VRAM...")
+        try:
+            r = requests.get(f"{OLLAMA_URL}/api/ps", timeout=5)
+            if r.status_code == 200:
+                for m in r.json().get("models", []):
+                    name = m.get("name", "")
+                    if name:
+                        requests.post(
+                            f"{OLLAMA_URL}/api/generate",
+                            json={"model": name, "keep_alive": 0},
+                            timeout=30,
+                        )
+                        print(f"    Unloaded: {name}")
+        except Exception as exc:
+            print(f"    [setup] Could not unload models: {exc}")
+        time.sleep(3)
+
+    # Step 2: GPU cleanup (free VRAM without touching Ollama process)
     gpu_cleanup()
-    restart_ollama_server()
+
+    # Step 3: Start Ollama only if it went down during cleanup
+    if not is_ollama_running():
+        print("  [setup] Ollama stopped during cleanup — restarting...")
+        restart_ollama_server()
+
     if not skip_pull:
         ensure_model(model)
 
