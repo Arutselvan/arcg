@@ -470,51 +470,88 @@ def is_correct(extracted: str, ground_truth: str, domain: str) -> bool:
 # Ollama inference
 # ---------------------------------------------------------------------------
 
-def call_ollama(prompt: str, model: str) -> tuple[str, float]:
-    """Returns (response_text, elapsed_seconds)."""
+def _call_ollama_stream(prompt: str, model: str, options: dict) -> str:
+    """Call Ollama using streaming mode and assemble the full response.
+
+    Streaming is more reliable than non-streaming for large outputs because:
+    - Non-streaming buffers the entire response in memory before returning
+    - Some Ollama versions return empty 'response' in non-stream mode for
+      models that emit only <think> tokens (the response field is populated
+      only after </think>, which may exceed num_predict before that point)
+    - Streaming returns every token as it is generated, so we always get
+      the full output including the thinking trace
+    """
     payload = {
         "model":  model,
         "prompt": prompt,
-        "stream": False,
-        "options": {
-            "temperature": 0,       # greedy decoding for reproducibility
-            "num_predict": 4096,    # allow full reasoning chain + answer
-            "num_ctx":     8192,    # override Ollama's VRAM-based auto-ctx (262K)
-            "seed":        42,
-        },
+        "stream": True,
+        "options": options,
+    }
+    chunks: list[str] = []
+    r = requests.post(
+        f"{OLLAMA_URL}/api/generate",
+        json=payload,
+        stream=True,
+        timeout=REQUEST_TIMEOUT,
+    )
+    r.raise_for_status()
+    for raw_line in r.iter_lines():
+        if not raw_line:
+            continue
+        try:
+            chunk = json.loads(raw_line)
+        except Exception:
+            continue
+        token = chunk.get("response", "")
+        if token:
+            chunks.append(token)
+        if chunk.get("done"):
+            break
+    return "".join(chunks).strip()
+
+
+def call_ollama(prompt: str, model: str) -> tuple[str, float]:
+    """Returns (response_text, elapsed_seconds).
+
+    Uses streaming mode so that every token (including <think> blocks) is
+    captured.  Falls back to non-streaming on the last attempt.
+    """
+    options = {
+        "temperature": 0,       # greedy decoding for reproducibility
+        "num_predict": 4096,    # allow full reasoning chain + answer
+        "num_ctx":     8192,    # override Ollama's VRAM-based auto-ctx (262K)
+        "seed":        42,
     }
     t0 = time.time()
     max_attempts = 8
     for attempt in range(max_attempts):
+        use_stream = (attempt < max_attempts - 1)  # last attempt: non-stream
         try:
-            r = requests.post(
-                f"{OLLAMA_URL}/api/generate",
-                json=payload,
-                timeout=REQUEST_TIMEOUT,
-            )
-            if r.status_code == 500:
-                err_msg = ""
-                try:
-                    err_msg = r.json().get("error", r.text[:120])
-                except Exception:
-                    err_msg = r.text[:120]
-                wait = min(60, 5 * (attempt + 1))
-                print(f"    [attempt {attempt+1}/{max_attempts}] HTTP 500: {err_msg}. Retry in {wait}s...")
-                if attempt == max_attempts // 2:
-                    print("    [attempt] Half retries exhausted — restarting Ollama server...")
-                    restart_ollama_server()
-                    ensure_model(model)
-                time.sleep(wait)
-                continue
-            r.raise_for_status()
-            resp_text = r.json().get("response", "").strip()
-            if not resp_text:
-                wait = 5
-                print(f"    [attempt {attempt+1}/{max_attempts}] Empty response from model. Retry in {wait}s...")
-                time.sleep(wait)
-                continue
-            elapsed = time.time() - t0
-            return resp_text, elapsed
+            if use_stream:
+                resp_text = _call_ollama_stream(prompt, model, options)
+            else:
+                # Final fallback: non-streaming
+                payload = {"model": model, "prompt": prompt,
+                           "stream": False, "options": options}
+                r = requests.post(
+                    f"{OLLAMA_URL}/api/generate",
+                    json=payload, timeout=REQUEST_TIMEOUT)
+                r.raise_for_status()
+                resp_text = r.json().get("response", "").strip()
+
+            if resp_text:
+                elapsed = time.time() - t0
+                return resp_text, elapsed
+
+            wait = 5
+            print(f"    [attempt {attempt+1}/{max_attempts}] Empty response "
+                  f"({'stream' if use_stream else 'non-stream'}). Retry in {wait}s...")
+            if attempt == max_attempts // 2:
+                print("    [attempt] Half retries exhausted — restarting Ollama server...")
+                restart_ollama_server()
+                ensure_model(model)
+            time.sleep(wait)
+
         except requests.exceptions.Timeout:
             wait = 15
             print(f"    [attempt {attempt+1}/{max_attempts}] Request timed out. Retry in {wait}s...")
@@ -522,7 +559,11 @@ def call_ollama(prompt: str, model: str) -> tuple[str, float]:
         except Exception as exc:
             wait = min(30, 5 * (attempt + 1))
             print(f"    [attempt {attempt+1}/{max_attempts}] {type(exc).__name__}: {exc}. Retry in {wait}s...")
+            if "500" in str(exc) and attempt == max_attempts // 2:
+                restart_ollama_server()
+                ensure_model(model)
             time.sleep(wait)
+
     print(f"    ERROR: All {max_attempts} attempts failed for model={model}. Returning empty response.")
     return "", time.time() - t0
 
