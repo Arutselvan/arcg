@@ -112,6 +112,13 @@ def restart_ollama_server():
     print("Restarting Ollama server with GPU-optimised settings...")
     subprocess.run(["pkill", "-x", "ollama"], check=False)
     time.sleep(3)
+    # Force OS to reclaim page cache so Ollama sees enough MemFree
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from free_ram_cache import ensure_free_ram_gb
+        ensure_free_ram_gb(40.0)
+    except Exception as exc:
+        print(f"  [RAM] free_ram_cache skipped: {exc}")
     subprocess.Popen(
         ["ollama", "serve"],
         env=OLLAMA_ENV,
