@@ -1,7 +1,7 @@
 """
 ARCG Experiment  --  Step 5: Run Evaluation Across 10 Reasoning Models
 =======================================================================
-Reads data/validated_paraphrases.json (output of Step 4) and runs all
+Reads data/paraphrases.json (validated paraphrases) and runs all
 10 reasoning models on every (problem, paraphrase) pair using
 chain-of-thought prompting.
 
@@ -61,7 +61,7 @@ from tqdm import tqdm
 
 OLLAMA_URL      = "http://localhost:11434"
 DATA_DIR        = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
-INPUT_FILE      = os.path.join(DATA_DIR, "validated_paraphrases.json")
+INPUT_FILE      = os.path.join(DATA_DIR, "paraphrases.json")
 OUTPUT_FILE     = os.path.join(DATA_DIR, "experiment_results.json")
 REQUEST_TIMEOUT = 480   # seconds per request
 
