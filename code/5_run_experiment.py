@@ -445,34 +445,47 @@ def extract_answer_math(text: str) -> str:
     """
     Multi-strategy numeric answer extraction for math problems.
     Priority:
-      1. Explicit ANSWER: tag
-      2. "the answer is X" / "= X" at end of sentence
-      3. Boxed LaTeX: \\boxed{X}
-      4. Last number in the cleaned text
+      1. Explicit ANSWER: tag (last occurrence)
+      2. LaTeX boxed: \\boxed{X} (last occurrence) -- high confidence
+      3. "the answer is X" / "= X" (last occurrence)
+      4. Bold markdown answer: **X** near end
+      5. Last number in the cleaned text
+
+    All strategies use the LAST match to avoid picking up intermediate
+    calculation steps (e.g. "= 2" in the middle of working) instead of
+    the final answer at the end of the response.
     """
     text = strip_thinking_traces(text)
 
-    # Strategy 1: ANSWER: tag
-    m = re.search(r"ANSWER\s*:\s*([\-\d,\.\s/]+)", text, re.IGNORECASE)
-    if m:
-        parts = m.group(1).replace(",", "").strip().split()
+    # Strategy 1: Explicit ANSWER: tag (last occurrence wins)
+    matches = re.findall(r"ANSWER\s*:\s*([\-\d,\.\s/]+)", text, re.IGNORECASE)
+    if matches:
+        parts = matches[-1].replace(",", "").strip().split()
         if parts:
             return parts[0]
 
-    # Strategy 2: "the answer is X" or "equals X"
-    m = re.search(
-        r"(?:the answer is|equals|=)\s*([\-\d,\.]+)",
+    # Strategy 2: LaTeX boxed (last occurrence) -- very reliable signal
+    # Match both \boxed{X} (1 backslash) and \\boxed{X} (2 backslashes, from
+    # double-escaped JSON storage) so this works regardless of how the string
+    # was loaded.
+    matches = re.findall(r"\\{1,2}boxed\{([\-\d,\.]+)\}", text)
+    if matches:
+        return matches[-1].replace(",", "").strip()
+
+    # Strategy 3: "the answer is X" or "equals X" (last occurrence)
+    matches = re.findall(
+        r"(?:the answer is|equals)\s*([\-\d,\.]+)",
         text, re.IGNORECASE
     )
-    if m:
-        return m.group(1).replace(",", "").strip()
+    if matches:
+        return matches[-1].replace(",", "").strip()
 
-    # Strategy 3: LaTeX boxed
-    m = re.search(r"\\boxed\{([\-\d,\.]+)\}", text)
-    if m:
-        return m.group(1).replace(",", "").strip()
+    # Strategy 4: Bold markdown **X** near end of text
+    matches = re.findall(r"\*\*([\-\d,\.]+)\*\*", text)
+    if matches:
+        return matches[-1].replace(",", "").strip()
 
-    # Strategy 4: Last number in text
+    # Strategy 5: Last number in text
     nums = re.findall(r"[\-]?\d+(?:\.\d+)?", text)
     if nums:
         return nums[-1]
