@@ -345,22 +345,45 @@ def call_ollama(prompt: str, model: str) -> str:
             "num_predict": 256,
         },
     }
-    for attempt in range(3):
+    max_attempts = 8
+    for attempt in range(max_attempts):
         try:
             r = requests.post(
                 f"{OLLAMA_URL}/api/generate",
                 json=payload,
                 timeout=REQUEST_TIMEOUT,
             )
+            if r.status_code == 500:
+                # Log the actual error body so we can see what is happening
+                try:
+                    err_body = r.json()
+                except Exception:
+                    err_body = r.text[:200]
+                wait = min(30, 5 * (attempt + 1))
+                print(f"    [attempt {attempt+1}/{max_attempts}] HTTP 500: {err_body}. "
+                      f"Retry in {wait}s...")
+                time.sleep(wait)
+                continue
             r.raise_for_status()
-            text = r.json()["response"].strip()
-            # Strip DeepSeek R1 thinking traces
+            text = r.json().get("response", "").strip()
+            # Strip DeepSeek R1 / Qwen3 thinking traces
             text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
-            return text
-        except Exception as exc:
-            wait = 2 ** attempt
-            print(f"    [attempt {attempt+1}/3] {exc}. Retry in {wait}s...")
+            if text:
+                return text
+            # Empty response -- retry
+            wait = 5
+            print(f"    [attempt {attempt+1}/{max_attempts}] Empty response. Retry in {wait}s...")
             time.sleep(wait)
+        except requests.exceptions.Timeout:
+            wait = 15
+            print(f"    [attempt {attempt+1}/{max_attempts}] Timeout. Retry in {wait}s...")
+            time.sleep(wait)
+        except Exception as exc:
+            wait = min(30, 5 * (attempt + 1))
+            print(f"    [attempt {attempt+1}/{max_attempts}] {type(exc).__name__}: {exc}. "
+                  f"Retry in {wait}s...")
+            time.sleep(wait)
+    print(f"    WARNING: All {max_attempts} attempts failed. Returning empty response.")
     return ""
 
 
