@@ -296,10 +296,13 @@ def build_judge_prompt(problem: dict, original: str, paraphrase: str,
         f"  2. Numerical/choice preservation: Are all values and options identical?\n"
         f"  3. No information added or removed that would change difficulty or answer.\n"
         f"  4. Grammatical coherence: Is it a well-formed question?\n\n"
-        f"Respond in this EXACT format (no other text):\n"
-        f"VERDICT: <VALID or INVALID>\n"
-        f"CONFIDENCE: <integer 1-5, where 5 is most confident>\n"
-        f"REASON: <one sentence explaining your judgment>\n"
+        f"You MUST respond using ONLY these three lines, with no preamble or explanation:\n"
+        f"VERDICT: VALID\n"
+        f"CONFIDENCE: 5\n"
+        f"REASON: one sentence here\n\n"
+        f"Replace VALID with INVALID if the paraphrase fails any criterion. "
+        f"Replace 5 with your actual confidence (1=very unsure, 5=certain). "
+        f"Do not add any other text before or after these three lines."
     )
 
 
@@ -348,23 +351,71 @@ def call_ollama(prompt: str, model: str) -> str:
 # Response parsing
 # ---------------------------------------------------------------------------
 
-def parse_verdict(response: str) -> dict:
+def parse_verdict(response: str, raw: str = "") -> dict:
+    """Parse a judge verdict from the model response.
+
+    Handles three response styles:
+      1. Structured:  VERDICT: VALID / CONFIDENCE: 4 / REASON: ...
+      2. Natural language containing 'valid' or 'invalid' keyword
+      3. Sentiment fallback: positive language -> VALID, negative -> INVALID
+    """
     verdict    = "UNKNOWN"
     confidence = 0
     reason     = ""
 
-    v_match = re.search(r"VERDICT\s*:\s*(VALID|INVALID)", response, re.IGNORECASE)
-    c_match = re.search(r"CONFIDENCE\s*:\s*([1-5])", response)
-    r_match = re.search(r"REASON\s*:\s*(.+)", response, re.IGNORECASE)
+    if not response:
+        return {"verdict": verdict, "confidence": confidence,
+                "reason": reason, "raw_response": raw}
+
+    # --- Style 1: structured key:value format ---
+    v_match = re.search(r"VERDICT\s*[:\-]\s*(VALID|INVALID)", response, re.IGNORECASE)
+    c_match = re.search(r"CONFIDENCE\s*[:\-]\s*([1-5])", response)
+    r_match = re.search(r"REASON\s*[:\-]\s*(.+)", response, re.IGNORECASE)
 
     if v_match:
-        verdict = v_match.group(1).upper()
-    if c_match:
-        confidence = int(c_match.group(1))
-    if r_match:
-        reason = r_match.group(1).strip()
+        verdict    = v_match.group(1).upper()
+        confidence = int(c_match.group(1)) if c_match else 3
+        reason     = r_match.group(1).strip() if r_match else ""
+        return {"verdict": verdict, "confidence": confidence,
+                "reason": reason, "raw_response": raw}
 
-    return {"verdict": verdict, "confidence": confidence, "reason": reason}
+    # --- Style 2: natural language with explicit VALID/INVALID word ---
+    # e.g. "The paraphrase is VALID" or "This is an invalid paraphrase"
+    nl_match = re.search(r"\b(VALID|INVALID)\b", response, re.IGNORECASE)
+    if nl_match:
+        verdict = nl_match.group(1).upper()
+        # Try to extract a confidence number anywhere in the response
+        any_conf = re.search(r"\b([1-5])\s*(?:/\s*5|out of 5)?\b", response)
+        confidence = int(any_conf.group(1)) if any_conf else 3
+        # Use the whole response as the reason (truncated)
+        reason = response.strip()[:300]
+        return {"verdict": verdict, "confidence": confidence,
+                "reason": reason, "raw_response": raw}
+
+    # --- Style 3: sentiment fallback ---
+    # If the model says things like "maintains the same structure", "equivalent",
+    # "preserves", "correctly", treat as VALID; "changes", "alters", "incorrect" -> INVALID
+    pos_words = re.compile(
+        r"\b(equivalent|preserves|maintains|correct|same|identical|valid|accurate|appropriate)\b",
+        re.IGNORECASE)
+    neg_words = re.compile(
+        r"\b(invalid|incorrect|changes|alters|different|loses|adds|removes|misleading)\b",
+        re.IGNORECASE)
+    pos_hits = len(pos_words.findall(response))
+    neg_hits = len(neg_words.findall(response))
+    if pos_hits > neg_hits:
+        verdict    = "VALID"
+        confidence = 2   # low confidence since we used fallback
+        reason     = f"[fallback] {response.strip()[:200]}"
+    elif neg_hits > pos_hits:
+        verdict    = "INVALID"
+        confidence = 2
+        reason     = f"[fallback] {response.strip()[:200]}"
+    else:
+        reason = response.strip()[:200]
+
+    return {"verdict": verdict, "confidence": confidence,
+            "reason": reason, "raw_response": raw}
 
 # ---------------------------------------------------------------------------
 # Checkpoint helpers
@@ -429,8 +480,7 @@ def run_judge(model: str, problems: list[dict]):
                 problem, p0_text, variant["text"], strategy_desc
             )
             response      = call_ollama(prompt, model)
-            parsed        = parse_verdict(response)
-            parsed["raw_response"] = response
+            parsed        = parse_verdict(response, raw=response)
             problem_results[vid]   = parsed
 
         results[pid] = problem_results
