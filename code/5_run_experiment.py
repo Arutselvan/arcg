@@ -99,19 +99,49 @@ def is_ollama_running() -> bool:
         return False
 
 
+# CUDA library paths — needed when Ollama is launched as a subprocess
+# (the user's shell may have these set but subprocess may not inherit them)
+_LD_PATHS = [
+    "/usr/local/cuda/lib64",
+    "/usr/lib/x86_64-linux-gnu",
+    "/usr/local/lib",
+]
+_existing_ld = os.environ.get("LD_LIBRARY_PATH", "")
+_extra_ld = ":".join(p for p in _LD_PATHS if os.path.isdir(p))
+_ld_library_path = ":".join(filter(None, [_extra_ld, _existing_ld]))
+
 OLLAMA_ENV = {
     **os.environ,
     "OLLAMA_MAX_LOADED_MODELS": "1",
     "OLLAMA_SCHED_SPREAD":      "0",
     "OLLAMA_KEEP_ALIVE":        "10m",
+    "LD_LIBRARY_PATH":          _ld_library_path,
+    "CUDA_VISIBLE_DEVICES":     os.environ.get("CUDA_VISIBLE_DEVICES", "0"),
 }
+
+OLLAMA_LOG_FILE = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "..", "data", "ollama_server.log"
+)
 
 
 def restart_ollama_server():
-    """Kill any running Ollama process and restart with GPU-optimised env vars."""
+    """Kill ALL Ollama processes (parent + runner children) and restart.
+
+    Key fixes vs previous version:
+    - Uses `pkill -f ollama` (not `-x`) to also kill `ollama runner` children
+      that hold the GPU context open
+    - Logs Ollama stdout/stderr to data/ollama_server.log instead of DEVNULL
+      so GPU init errors are visible
+    - Passes explicit LD_LIBRARY_PATH and CUDA_VISIBLE_DEVICES so the
+      subprocess can find libcuda even if the shell environment differs
+    """
     print("Restarting Ollama server with GPU-optimised settings...")
-    subprocess.run(["pkill", "-x", "ollama"], check=False)
-    time.sleep(3)
+
+    # Kill parent + all children (runner, llama_server, etc.)
+    for sig in ["-TERM", "-KILL"]:
+        subprocess.run(["pkill", sig, "-f", "ollama"], check=False)
+    time.sleep(5)  # give kernel time to reclaim GPU context
+
     # Force OS to reclaim page cache so Ollama sees enough MemFree
     try:
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -119,18 +149,24 @@ def restart_ollama_server():
         ensure_free_ram_gb(40.0)
     except Exception as exc:
         print(f"  [RAM] free_ram_cache skipped: {exc}")
+
+    os.makedirs(os.path.dirname(OLLAMA_LOG_FILE), exist_ok=True)
+    log_fh = open(OLLAMA_LOG_FILE, "a")
+    log_fh.write(f"\n\n=== ollama serve restart at {time.strftime('%Y-%m-%d %H:%M:%S')} ===\n")
+    log_fh.flush()
+
     subprocess.Popen(
         ["ollama", "serve"],
         env=OLLAMA_ENV,
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
+        stdout=log_fh,
+        stderr=log_fh,
     )
     for _ in range(30):
         time.sleep(2)
         if is_ollama_running():
-            print("Ollama server started.")
+            print(f"Ollama server started. Logs: {OLLAMA_LOG_FILE}")
             return
-    print("ERROR: Could not start Ollama server.")
+    print(f"ERROR: Could not start Ollama server. Check logs: {OLLAMA_LOG_FILE}")
     sys.exit(1)
 
 
