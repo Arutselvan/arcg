@@ -179,7 +179,13 @@ def validate(questions: dict, rows: dict) -> list[dict]:
             else:
                 seen_texts[norm] = key
 
-        # Build output record (same schema as script 1's paraphrases.json)
+        # Build output record in the exact schema used by scripts 2-5:
+        # { "paraphrases": [ {"id": "P0", "text": "..."}, {"id": "P1", "text": "..."}, ... ] }
+        paraphrase_list = [{"id": "P0", "text": problem["question"]}]  # original
+        for key in ["P1", "P2", "P3", "P4", "P5"]:
+            if key in paraphrases:
+                paraphrase_list.append({"id": key, "text": paraphrases[key]})
+
         record = {
             "id":          problem["id"],
             "domain":      problem["domain"],
@@ -187,10 +193,7 @@ def validate(questions: dict, rows: dict) -> list[dict]:
             "source":      problem["source"],
             "answer":      problem["answer"],
             "answer_type": problem.get("answer_type", "numeric"),
-            "variants": {
-                "P0": problem["question"],   # original
-                **paraphrases,
-            },
+            "paraphrases": paraphrase_list,
         }
         if problem.get("choices"):
             record["choices"] = problem["choices"]
@@ -229,7 +232,7 @@ def main():
     output = validate(questions, rows)
 
     # Summary stats
-    total_variants = sum(len(r["variants"]) - 1 for r in output)  # exclude P0
+    total_variants = sum(len(r["paraphrases"]) - 1 for r in output)  # exclude P0
     print(f"\nValidation complete:")
     print(f"  Problems:          {len(output)} / {len(questions)}")
     print(f"  Paraphrases kept:  {total_variants} / {len(output) * 5} possible")
