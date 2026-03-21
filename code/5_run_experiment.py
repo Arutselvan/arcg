@@ -541,13 +541,15 @@ def is_correct(extracted: str, ground_truth: str, domain: str) -> bool:
 def _call_ollama_stream(prompt: str, model: str, options: dict) -> str:
     """Call Ollama using streaming mode and assemble the full response.
 
-    Streaming is more reliable than non-streaming for large outputs because:
-    - Non-streaming buffers the entire response in memory before returning
-    - Some Ollama versions return empty 'response' in non-stream mode for
-      models that emit only <think> tokens (the response field is populated
-      only after </think>, which may exceed num_predict before that point)
-    - Streaming returns every token as it is generated, so we always get
-      the full output including the thinking trace
+    Newer Ollama versions (>=0.6) split the stream into two fields:
+      - 'thinking': tokens inside the <think> block
+      - 'response': tokens after </think> (the actual answer)
+
+    Older versions put everything (including <think> tags) into 'response'.
+
+    We collect BOTH fields so we always get the full text regardless of
+    which Ollama version is running.  The thinking block is wrapped back
+    into <think>...</think> tags so strip_thinking_traces() can parse it.
     """
     payload = {
         "model":  model,
@@ -555,7 +557,8 @@ def _call_ollama_stream(prompt: str, model: str, options: dict) -> str:
         "stream": True,
         "options": options,
     }
-    chunks: list[str] = []
+    thinking_chunks: list[str] = []
+    response_chunks: list[str] = []
     r = requests.post(
         f"{OLLAMA_URL}/api/generate",
         json=payload,
@@ -570,12 +573,27 @@ def _call_ollama_stream(prompt: str, model: str, options: dict) -> str:
             chunk = json.loads(raw_line)
         except Exception:
             continue
-        token = chunk.get("response", "")
-        if token:
-            chunks.append(token)
+        thinking_token = chunk.get("thinking", "")
+        response_token = chunk.get("response", "")
+        if thinking_token:
+            thinking_chunks.append(thinking_token)
+        if response_token:
+            response_chunks.append(response_token)
         if chunk.get("done"):
             break
-    return "".join(chunks).strip()
+
+    thinking_text = "".join(thinking_chunks).strip()
+    response_text = "".join(response_chunks).strip()
+
+    # Reconstruct full text so strip_thinking_traces() works correctly
+    if thinking_text and response_text:
+        return f"<think>{thinking_text}</think>\n{response_text}"
+    elif thinking_text:
+        # Model only produced thinking tokens (no answer after </think>)
+        # Wrap so strip_thinking_traces fallback can search inside
+        return f"<think>{thinking_text}</think>"
+    else:
+        return response_text
 
 
 def call_ollama(prompt: str, model: str) -> tuple[str, float]:
