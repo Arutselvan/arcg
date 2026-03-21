@@ -1,0 +1,2592 @@
+{
+  "GSM_Digimon_had_its_When": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves numerical values, does not add or remove information affecting difficulty, and is grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves numerical values, does not add or remove information affecting difficulty, and is grammatically coherent."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering its meaning or numerical values, maintaining grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering its meaning or numerical values, maintaining grammatical coherence."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all necessary information and asks for the same answer, using passive voice and restructured sentences without changing the meaning.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all necessary information and asks for the same answer, using passive voice and restructured sentences without changing the meaning."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering its meaning or necessary details.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its meaning or necessary details."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems ask for the same calculation with equivalent structures and preserved numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for the same calculation with equivalent structures and preserved numerical values."
+    }
+  },
+  "GSM_John_takes_care_of": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the same weekly care hours with identical numbers and no added/removed info.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same weekly care hours with identical numbers and no added/removed info.  \n\nThe paraphrase maintains semantic equivalence, preserves all numerical values, doesn't add or remove information, and is grammatically coherent.\n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering its meaning or numerical details."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the same weekly hours calculation without altering numerical values or essential information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same weekly hours calculation without altering numerical values or essential information.  \n\nThe paraphrase maintains all key elements and asks for the same result, ensuring semantic equivalence and correct answer preservation."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both the original and paraphrase ask for the same weekly hours spent on dog care with identical numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both the original and paraphrase ask for the same weekly hours spent on dog care with identical numerical values.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves all numerical values, doesn't add or remove information, and is grammatically coherent."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both the original and paraphrase ask for the same weekly hours spent on dog care, using equivalent numerical values and structure without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both the original and paraphrase ask for the same weekly hours spent on dog care, using equivalent numerical values and structure without adding or omitting information.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by rephrasing numbers without altering their meaning, preserving all necessary details accurately."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both questions calculate weekly time spent on tasks involving multiple entities with identical numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both questions calculate weekly time spent on tasks involving multiple entities with identical numerical values."
+    }
+  },
+  "GSM_Jason_and_DJ_each": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language, preserving all numerical values and maintaining the same question structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language, preserving all numerical values and maintaining the same question structure."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all original numerical values and asks for the same result without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all original numerical values and asks for the same result without adding or removing information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves numerical values, doesn't add or remove information, and is grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves numerical values, doesn't add or remove information, and is grammatically coherent."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with the same numerical values and asks for the same solution.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with the same numerical values and asks for the same solution."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems involve redistributing items equally among four individuals with identical numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems involve redistributing items equally among four individuals with identical numerical values.  \n\nThe paraphrase maintains the same structure and numerical values as the original problem, ensuring semantic equivalence without adding or removing information that would affect the answer."
+    }
+  },
+  "GSM_A_football_team_has": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language without altering any numerical values or relationships.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language without altering any numerical values or relationships.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves all numerical values, and is grammatically coherent."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same relationships between offense, defense, and special teams players while using simpler language.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same relationships between offense, defense, and special teams players while using simpler language.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering numerical values or essential information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same relationships between offense, defense, and special teams players while rephrasing the sentences.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same relationships between offense, defense, and special teams players while rephrasing the sentences.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original problem's structure and requirements without altering any numerical values or introducing new information.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions present the same mathematical relationships and ask for the same solution, ensuring semantic equivalence.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase is grammatically correct and preserves all necessary information from the original problem."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem with equivalent numerical values and maintains the same structure for solving.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem with equivalent numerical values and maintains the same structure for solving."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical relationships and asks for the equivalent value in a different context.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical relationships and asks for the equivalent value in a different context."
+    }
+  },
+  "GSM_In_a_candy_there": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem using precise mathematical language without altering any values or information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem using precise mathematical language without altering any values or information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering its meaning or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem's conditions without altering meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem's conditions without altering meaning or numerical values."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the number of pink gumballs given the same relationship and blue count.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the number of pink gumballs given the same relationship and blue count."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems use identical numerical relationships in different contexts, preserving meaning and answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems use identical numerical relationships in different contexts, preserving meaning and answer."
+    }
+  },
+  "GSM_A_family_of_parents": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem with equivalent information and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem with equivalent information and structure."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves numerical values, and is grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves numerical values, and is grammatically coherent."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the same total payment calculation with identical numerical values and no added or removed information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same total payment calculation with identical numerical values and no added or removed information.  \n\nThe original and paraphrase are semantically equivalent, preserve all numerical values, contain no additional or missing information, and are grammatically coherent."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its meaning or numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems ask for the total cost of two adults and one child with additional items at the same prices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for the total cost of two adults and one child with additional items at the same prices.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all numerical values and asks for the same total cost in a different context."
+    }
+  },
+  "GSM_The_book_is_printed": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the same calculation using identical values, maintaining clarity and completeness.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same calculation using identical values, maintaining clarity and completeness."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering any critical information or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering any critical information or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem, preserving all essential details and numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem, preserving all essential details and numerical values."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the same number of pages in a book with identical given values and conditions.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same number of pages in a book with identical given values and conditions.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its meaning or numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems ask for the total number of printed sides (pages or designs) given a stacking rate and thickness/height, maintaining numerical consistency.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for the total number of printed sides (pages or designs) given a stacking rate and thickness/height, maintaining numerical consistency.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking for the same calculation in a different context without altering numerical values or adding/removing information."
+    }
+  },
+  "GSM_After_transferring_to_a": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both questions ask for the same total number of friends/acquaintances using identical numerical values and relationships.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both questions ask for the same total number of friends/acquaintances using identical numerical values and relationships."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original meaning, numerical values, and asks for the same total friends without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original meaning, numerical values, and asks for the same total friends without adding or removing information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original meaning, numerical values, and structure without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original meaning, numerical values, and structure without adding or omitting information."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the total number of friends Amy and Lily have together, using equivalent numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the total number of friends Amy and Lily have together, using equivalent numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical relationships and asks for the total number of workout partners, equivalent to friends in the original problem.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical relationships and asks for the total number of workout partners, equivalent to friends in the original problem.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase is semantically equivalent with identical numerical values and structure."
+    }
+  },
+  "GSM_John_packs_in_small": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using formal mathematical language without altering the original meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using formal mathematical language without altering the original meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all necessary details and numerical values without altering the problem's requirements.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all necessary details and numerical values without altering the problem's requirements.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question with equivalent meaning, preserving all essential information and numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering any key details or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering any key details or numerical values."
+    },
+    "P4": {
+      "verdict": "INVALID",
+      "confidence": 4,
+      "reason": "The paraphrase alters numerical values (30 to three dozen) and changes the count per small bag, which could affect understanding despite the same answer.",
+      "raw_response": "The paraphrase changes the number of M&Ms per ounce and per small bag but still results in the same total number of small bags. However, altering these values without a direct equivalence makes the problem semantically different.\n\nVERDICT: INVALID  \nCONFIDENCE: 4  \nREASON: The paraphrase alters numerical values (30 to three dozen) and changes the count per small bag, which could affect understanding despite the same answer."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same structure, numerical values, and question intent with a different context.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same structure, numerical values, and question intent with a different context."
+    }
+  },
+  "GSM_There_are_deer_in": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the same calculation with identical numbers and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same calculation with identical numbers and structure.  \n\nThe paraphrase accurately restates the original problem without altering any numerical values or essential information, ensuring semantic equivalence and maintaining grammatical coherence.\n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase is semantically equivalent with all values preserved and no additional information added."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem using equivalent terms without changing the meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem using equivalent terms without changing the meaning or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original meaning, numerical values, and structure without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original meaning, numerical values, and structure without adding or omitting information."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem with equivalent numerical values and maintains the same question structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem with equivalent numerical values and maintains the same question structure."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical structure and relationships using a different context without altering the required calculation or answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical structure and relationships using a different context without altering the required calculation or answer."
+    }
+  },
+  "GSM_Jean_has_Jean_eats": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both the original and paraphrase ask for the number of groups formed after consuming two items from an initial count of thirty, using identical numerical values and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both the original and paraphrase ask for the number of groups formed after consuming two items from an initial count of thirty, using identical numerical values and structure."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical values and operations, asking for the same result in a simpler language.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical values and operations, asking for the same result in a simpler language."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both the original and paraphrase present the same problem with identical numerical values and ask for the same solution.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both the original and paraphrase present the same problem with identical numerical values and ask for the same solution."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering its meaning or numerical values, maintaining grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its meaning or numerical values, maintaining grammatical coherence."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical values and structure, ensuring semantic equivalence without altering difficulty or answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical values and structure, ensuring semantic equivalence without altering difficulty or answer."
+    }
+  },
+  "GSM_The_expenditure_of_Joseph": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical values and asks for the same calculation in a grammatically correct manner.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical values and asks for the same calculation in a grammatically correct manner."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the total expenditure over two months with identical numerical values, maintaining semantic equivalence without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the total expenditure over two months with identical numerical values, maintaining semantic equivalence without adding or omitting information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the total expenditure over two months with identical numerical values, maintaining clarity and coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the total expenditure over two months with identical numerical values, maintaining clarity and coherence."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering its meaning or numerical values, maintaining clarity and coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its meaning or numerical values, maintaining clarity and coherence."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same structure, numerical values, and asks for the total over two months, just in a different context.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same structure, numerical values, and asks for the total over two months, just in a different context."
+    }
+  },
+  "GSM_Sophia_and_Rose_went": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem using precise mathematical language without altering the meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem using precise mathematical language without altering the meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the same total number of onions and potatoes Sophia bought, using equivalent phrasing without altering numerical values or adding/removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same total number of onions and potatoes Sophia bought, using equivalent phrasing without altering numerical values or adding/removing information.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking for the same total with identical numbers and no additional info."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering meaning or numerical values, maintaining grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering meaning or numerical values, maintaining grammatical coherence."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by accurately reflecting that Rose bought four times as many onions and potatoes as Sophia, preserving all numerical values and asking for the same total count.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by accurately reflecting that Rose bought four times as many onions and potatoes as Sophia, preserving all numerical values and asking for the same total count."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by preserving the multiplier, quantities, and question structure in a different context.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by preserving the multiplier, quantities, and question structure in a different context."
+    }
+  },
+  "GSM_For_each_small_task": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all original details and asks for the same calculation without altering any values or introducing new information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all original details and asks for the same calculation without altering any values or introducing new information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original's meaning and numerical values without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original's meaning and numerical values without adding or omitting information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering its meaning or numerical values."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately conveys the same information using equivalent terms and maintains all numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately conveys the same information using equivalent terms and maintains all numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical values, structure, and question intent with a different context.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical values, structure, and question intent with a different context."
+    }
+  },
+  "GSM_Mason_likes_eating_If": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language without altering the meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language without altering the meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the same total number of carrots Mason eats in a week, preserving all numerical details and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same total number of carrots Mason eats in a week, preserving all numerical details and structure."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical values and asks for the same total number of carrots consumed in a week.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical values and asks for the same total number of carrots consumed in a week."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original problem's structure and numerical values without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original problem's structure and numerical values without adding or omitting information."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems ask for the total consumption over a week with identical numerical values and structure, differing only in context without altering difficulty or answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for the total consumption over a week with identical numerical values and structure, differing only in context without altering difficulty or answer."
+    }
+  },
+  "GSM_Janet_buys_a_brooch": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical terms without altering the required calculations or information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical terms without altering the required calculations or information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering numerical values or required calculations.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering numerical values or required calculations."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original problem's requirements and calculations.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original problem's requirements and calculations."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects all elements of the original problem without altering numerical values or introducing new information, ensuring semantic equivalence and maintaining grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects all elements of the original problem without altering numerical values or introducing new information, ensuring semantic equivalence and maintaining grammatical coherence."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same structure and numerical values, asking for the total cost including a percentage of the sum.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same structure and numerical values, asking for the total cost including a percentage of the sum."
+    }
+  },
+  "GSM_A_small_sunflower_has": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using formal terms without changing its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using formal terms without changing its meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both the original and paraphrase ask for the total number of seeds with identical numerical values and relationships, using synonymous terms without altering meaning or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both the original and paraphrase ask for the total number of seeds with identical numerical values and relationships, using synonymous terms without altering meaning or difficulty."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering meaning or numerical values."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with equivalent numerical values and asks for the same total seed count.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with equivalent numerical values and asks for the same total seed count."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical relationships and asks for the combined total in a structurally identical manner.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical relationships and asks for the combined total in a structurally identical manner."
+    }
+  },
+  "GSM_Matt_wants_cookies_for": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same mathematical relationship and asks for the same solution.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same mathematical relationship and asks for the same solution."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the number of carrot sticks needed for five cookies with the same conditions.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the number of carrot sticks needed for five cookies with the same conditions."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the same number of carrot sticks needed to get five cookies, preserving all numerical values and maintaining clarity.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same number of carrot sticks needed to get five cookies, preserving all numerical values and maintaining clarity.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking for the same number of carrot sticks while preserving all numerical values and ensuring grammatical coherence."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its meaning or numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same mathematical structure and numerical values, just with a different real-world context.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same mathematical structure and numerical values, just with a different real-world context."
+    }
+  },
+  "GSM_Bob_thinks_he_needs": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all original numerical values and asks for the same calculation without altering meaning or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all original numerical values and asks for the same calculation without altering meaning or difficulty."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase preserves all necessary details without altering the required calculations.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase preserves all necessary details without altering the required calculations."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by preserving all numerical values and the question's intent while restructuring sentences passively.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by preserving all numerical values and the question's intent while restructuring sentences passively."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering any essential details or calculations needed to find the correct answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering any essential details or calculations needed to find the correct answer."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by preserving the numerical values and structure while changing the context from popsicle sticks to colored pencils.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by preserving the numerical values and structure while changing the context from popsicle sticks to colored pencils."
+    }
+  },
+  "GSM_Courtney_attended_a_concert": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering its meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering its meaning or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering meaning or numerical values.  \n\nThe paraphrase maintains the original's structure and intent by using passive voice and reordering sentences while preserving all necessary information for solving the problem."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original problem by stating that Courtney's count was 20% higher than the actual number, which is equivalent to being a fifth more.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original problem by stating that Courtney's count was 20% higher than the actual number, which is equivalent to being a fifth more.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same calculation and preserve all numerical values without adding or removing information.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves numerical data, doesn't alter difficulty, and is grammatically correct."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, numerical values, and grammatical coherence without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, numerical values, and grammatical coherence without adding or removing information."
+    }
+  },
+  "GSM_Julie_had_She_spent": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language without altering the meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language without altering the meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using casual language without altering meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using casual language without altering meaning or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by restructuring sentences passively without altering numerical values or essential information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by restructuring sentences passively without altering numerical values or essential information."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with equivalent percentages expressed as fractions, preserving all numerical values and steps.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with equivalent percentages expressed as fractions, preserving all numerical values and steps.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by correctly converting percentages to fractions without altering the problem's structure or numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems involve calculating remaining quantities after successive percentage deductions, maintaining numerical values and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems involve calculating remaining quantities after successive percentage deductions, maintaining numerical values and structure."
+    }
+  },
+  "GSM_John_picks_bananas_on": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language without altering the original meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language without altering the original meaning or numerical values.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves all numerical values, and is grammatically coherent."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering any numerical values or information, maintaining semantic equivalence and grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering any numerical values or information, maintaining semantic equivalence and grammatical coherence."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the total number of bananas picked over three days with identical numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the total number of bananas picked over three days with identical numerical values."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with equivalent numbers and asks for the same total.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with equivalent numbers and asks for the same total."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same structure, numerical values, and total calculation while changing the context from bananas to widgets.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same structure, numerical values, and total calculation while changing the context from bananas to widgets."
+    }
+  },
+  "GSM_Shiela_is_required_to": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise language without altering the meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise language without altering the meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem using everyday language without changing its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem using everyday language without changing its meaning or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by restructuring sentences without altering the required calculation or information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by restructuring sentences without altering the required calculation or information.  \n\nThe paraphrase accurately reflects the original problem's requirements and calculations."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its meaning or numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same structure and numerical values while changing the real-world context appropriately.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same structure and numerical values while changing the real-world context appropriately."
+    }
+  },
+  "GSM_Henry_made_two_stops": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language, preserving all numerical values and maintaining grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language, preserving all numerical values and maintaining grammatical coherence."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem in casual language without altering the meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem in casual language without altering the meaning or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by preserving the original's structure and numerical values while using passive voice and reordering sentences without altering meaning or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by preserving the original's structure and numerical values while using passive voice and reordering sentences without altering meaning or difficulty."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the problem without altering its meaning or numerical details.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the problem without altering its meaning or numerical details."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same structure, numerical values, and question intent with a different context.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same structure, numerical values, and question intent with a different context."
+    }
+  },
+  "GSM_A_wallpaper_costs_at": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both questions ask for the cost after a 20% saving from $400, maintaining semantic equivalence and numerical preservation.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both questions ask for the cost after a 20% saving from $400, maintaining semantic equivalence and numerical preservation."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the cost after a 20% saving from $400, maintaining all necessary details.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the cost after a 20% saving from $400, maintaining all necessary details."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the DIY cost after a 20% saving from $400.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the DIY cost after a 20% saving from $400.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent and numerical values without altering meaning or difficulty.\n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves all numerical values, doesn't add or remove information, and is grammatically coherent."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the cost after saving 20%, which is equivalent to saving a fifth of $400.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the cost after saving 20%, which is equivalent to saving a fifth of $400.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original problem's requirements and numerical values without altering the meaning or difficulty."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical values and calculation while changing the context from wallpaper to cake.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical values and calculation while changing the context from wallpaper to cake."
+    }
+  },
+  "GSM_Jen_decides_to_travel": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering the required calculation or information.",
+      "raw_response": "The original problem asks for the travel cost, which includes both supplies and tickets. The paraphrase explicitly asks for the combined total, aligning with the correct answer of $1000.\n\nVERDICT: VALID\nCONFIDENCE: 5\nREASON: The paraphrase accurately restates the problem without altering the required calculation or information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original meaning, numerical values, and asks for the same total cost calculation.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original meaning, numerical values, and asks for the same total cost calculation."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by asking for the same travel cost, preserves all numerical values and relationships, does not add or remove information, and is grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking for the same travel cost, preserves all numerical values and relationships, does not add or remove information, and is grammatically coherent.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the total travel cost, use the same numbers, and are well-structured."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering the meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering the meaning or numerical values."
+    },
+    "P5": {
+      "verdict": "INVALID",
+      "confidence": 5,
+      "reason": "The paraphrase asks for a different total, including both materials and labor, whereas the original only asks for travel costs.",
+      "raw_response": "The original asks for travel costs (50% more than $400), while the paraphrase asks for total project cost (materials + labor). This changes what's being calculated.\n\nVERDICT: INVALID  \nCONFIDENCE: 5  \nREASON: The paraphrase asks for a different total, including both materials and labor, whereas the original only asks for travel costs."
+    }
+  },
+  "GSM_Ricardo_grows_tomatoes_and": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical terms without altering the original intent or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical terms without altering the original intent or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering meaning, numerical values, or necessary information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering meaning, numerical values, or necessary information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the total number of fruits with identical numerical values and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the total number of fruits with identical numerical values and structure.  \n\nThe paraphrase maintains the same information without altering any details or difficulty level, ensuring semantic equivalence."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with equivalent numbers and asks for the same total fruits.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with equivalent numbers and asks for the same total fruits.  \n\nThe original and paraphrase both specify Ricardo's plants and their yields correctly."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same structure, numerical values, and calculation requirements while changing the context from gardening to manufacturing.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same structure, numerical values, and calculation requirements while changing the context from gardening to manufacturing.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems require calculating total units by multiplying quantities and adding them together with identical numbers."
+    }
+  },
+  "GSM_A_stickler_for_Octavia": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all numerical values, relationships, and asks the same question using different terminology.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all numerical values, relationships, and asks the same question using different terminology.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with equivalent structure and numbers."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering numerical values or requirements.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering numerical values or requirements."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves numerical values, doesn't add or remove information, and is grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves numerical values, doesn't add or remove information, and is grammatically coherent."
+    },
+    "P4": {
+      "verdict": "INVALID",
+      "confidence": 5,
+      "reason": "The paraphrase incorrectly states the recommended coffee intake, changing the problem's parameters.",
+      "raw_response": "The paraphrase incorrectly specifies the daily recommendation as eight cups, altering the problem's parameters and resulting in an incorrect reduction amount.\n\nVERDICT: INVALID  \nCONFIDENCE: 5  \nREASON: The paraphrase incorrectly states the recommended coffee intake, changing the problem's parameters."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems ask for the reduction needed to meet a daily recommendation of 4 units, maintaining numerical values and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for the reduction needed to meet a daily recommendation of 4 units, maintaining numerical values and structure."
+    }
+  },
+  "GSM_Mason_is_on_his": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask for the total distance traveled at a constant speed over two periods, preserving all numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the total distance traveled at a constant speed over two periods, preserving all numerical values.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking for the same total distance with identical numerical values and no added or removed information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its meaning or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by preserving all necessary details and numerical values without altering the problem's difficulty or coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by preserving all necessary details and numerical values without altering the problem's difficulty or coherence."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately represents the original problem with equivalent times and speed, leading to the same total distance.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately represents the original problem with equivalent times and speed, leading to the same total distance.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask for the same total distance with consistent numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same structure, numerical values, and asks for the total distance traveled, just with a different context.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same structure, numerical values, and asks for the total distance traveled, just with a different context.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for total distance using identical numbers in a similar structure."
+    }
+  },
+  "GSM_It_takes_minutes_for": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical terms without altering the meaning or numerical values.",
+      "raw_response": "The original and paraphrase both calculate total time across three stages with identical values and structure.\n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical terms without altering the meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering meaning or numerical values.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves all numerical values, and is grammatically coherent."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering meaning or numerical values."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the original problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the original problem without altering its meaning or numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase mirrors the original's structure with analogous contexts, preserving all numerical values and operations without altering difficulty or answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase mirrors the original's structure with analogous contexts, preserving all numerical values and operations without altering difficulty or answer."
+    }
+  },
+  "GSM_Griffin_had_french_but": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using formal terms without altering numerical values or essential information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using formal terms without altering numerical values or essential information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original problem's structure, numbers, and asks for the same information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original problem's structure, numbers, and asks for the same information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all original information with equivalent structure and meaning.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all original information with equivalent structure and meaning."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately preserves all numerical values and relationships while maintaining grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately preserves all numerical values and relationships while maintaining grammatical coherence."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems have identical numerical values and structures, maintaining semantic equivalence through analogous contexts.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems have identical numerical values and structures, maintaining semantic equivalence through analogous contexts."
+    }
+  },
+  "GSM_A_pirate_crew_is": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all essential information and mathematical relationships without altering the required calculations.",
+      "raw_response": "The paraphrase accurately reflects the original problem by maintaining all necessary numerical details and relationships, ensuring the same solution process and answer.\n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all essential information and mathematical relationships without altering the required calculations."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering numerical values or essential information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering numerical values or essential information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately preserves all necessary information and numerical values without altering the problem's requirements or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately preserves all necessary information and numerical values without altering the problem's requirements or difficulty."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately captures the original problem's details and asks for the same solution without altering any numerical values or introducing new information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately captures the original problem's details and asks for the same solution without altering any numerical values or introducing new information."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems involve counting actions over days with a modification on the third day, maintaining numerical consistency and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems involve counting actions over days with a modification on the third day, maintaining numerical consistency and structure."
+    }
+  },
+  "GSM_Brady_is_counting_the": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language without altering the required computation or information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language without altering the required computation or information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical values and asks for the total amount of money in dollars without altering any information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical values and asks for the total amount of money in dollars without altering any information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restructures the original question without altering its meaning or numerical details.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restructures the original question without altering its meaning or numerical details."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with equivalent numerical values and asks for the same total in dollars.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with equivalent numerical values and asks for the same total in dollars.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves all numerical values, doesn't add or remove information, and is grammatically coherent."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems ask for the total value in dollars using identical quantities and denominations, only differing in context from money to stamps.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for the total value in dollars using identical quantities and denominations, only differing in context from money to stamps."
+    }
+  },
+  "GSM_Calvin_is_making_soup": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering its essential elements or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its essential elements or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its meaning or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all original information, structure, and numerical values while reorganizing sentences using passive voice.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all original information, structure, and numerical values while reorganizing sentences using passive voice."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions ask how many additional servings each child can have from leftovers, preserving all numerical details and context.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions ask how many additional servings each child can have from leftovers, preserving all numerical details and context."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves numerical values, doesn't add/remove information, and is grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves numerical values, doesn't add/remove information, and is grammatically coherent."
+    }
+  },
+  "GSM_A_local_town_is": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language without altering the meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language without altering the meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all numerical values and correctly restates the operations for each year without altering the problem's requirements or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all numerical values and correctly restates the operations for each year without altering the problem's requirements or difficulty."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all numerical values and logical structure, ensuring semantic equivalence without altering difficulty or answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all numerical values and logical structure, ensuring semantic equivalence without altering difficulty or answer."
+    },
+    "P4": {
+      "verdict": "INVALID",
+      "confidence": 4,
+      "reason": "The paraphrase may ambiguously interpret \"match it again,\" potentially altering the calculation for year three and thus the total number of homes built.",
+      "raw_response": "VERDICT: INVALID  \nCONFIDENCE: 4  \nREASON: The paraphrase may ambiguously interpret \"match it again,\" potentially altering the calculation for year three and thus the total number of homes built.\n\nThe correct answer is 144, but the paraphrase could lead to a different interpretation."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems use identical numerical operations in different contexts without altering values or structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems use identical numerical operations in different contexts without altering values or structure."
+    }
+  },
+  "GSM_Adam_went_to_a": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language without altering the original meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language without altering the original meaning or numerical values.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase is semantically equivalent, preserves all numerical values, and maintains grammatical coherence."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem with identical numerical values and asks for the same result.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem with identical numerical values and asks for the same result."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves numerical values, doesn't add or remove information, and remains grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves numerical values, doesn't add or remove information, and remains grammatically coherent.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase is semantically equivalent, numerically consistent, and well-structured without altering the problem's difficulty or answer."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering its meaning or numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original structure and numerical values with a different context, ensuring semantic equivalence without altering difficulty or answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original structure and numerical values with a different context, ensuring semantic equivalence without altering difficulty or answer."
+    }
+  },
+  "GSM_boat_sprang_a_leak": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with equivalent meaning, preserving all numerical values and maintaining grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with equivalent meaning, preserving all numerical values and maintaining grammatical coherence."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same information and numerical values without altering the problem's requirements or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same information and numerical values without altering the problem's requirements or difficulty."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by preserving all numerical values and relationships while restructuring the sentences passively without altering the problem's requirements or answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by preserving all numerical values and relationships while restructuring the sentences passively without altering the problem's requirements or answer."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the problem without altering the necessary information for solving it.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the problem without altering the necessary information for solving it."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems calculate total accumulation over time with consistent rates and proportional values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems calculate total accumulation over time with consistent rates and proportional values."
+    }
+  },
+  "GSM_and_Sarah_painted_easter": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all numerical values and relationships while using formal variables, preserving semantic equivalence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all numerical values and relationships while using formal variables, preserving semantic equivalence."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by using synonymous terms without altering the problem's structure or required calculations.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by using synonymous terms without altering the problem's structure or required calculations."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all original information with passive restructuring without altering meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all original information with passive restructuring without altering meaning or numerical values.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase is semantically equivalent, preserves all numbers, and maintains grammatical coherence."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately preserves all numerical details and asks for the same comparison, maintaining semantic equivalence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately preserves all numerical details and asks for the same comparison, maintaining semantic equivalence."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems are structurally identical with preserved numerical values and relationships, maintaining semantic equivalence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems are structurally identical with preserved numerical values and relationships, maintaining semantic equivalence."
+    }
+  },
+  "GSM_Aaron_and_Vanessa_were": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using formal mathematical language without altering the original meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using formal mathematical language without altering the original meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering its meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering its meaning or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by restructuring sentences without altering meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by restructuring sentences without altering meaning or numerical values.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem using passive voice and different sentence order, preserving all necessary information and numerical values."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original problem without altering any key details or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original problem without altering any key details or numerical values."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same relationships between speed, distance, and time as the original problem.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same relationships between speed, distance, and time as the original problem."
+    }
+  },
+  "GSM_Martha_is_planning_her": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language without altering the meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language without altering the meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original's meaning and numerical values without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original's meaning and numerical values without adding or omitting information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by preserving all numerical values and relationships without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by preserving all numerical values and relationships without adding or removing information."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately preserves the original's meaning, numerical values, and structure without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately preserves the original's meaning, numerical values, and structure without adding or omitting information."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same numerical structure and asks for the same result in a different context without altering any values or adding/removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same numerical structure and asks for the same result in a different context without altering any values or adding/removing information."
+    }
+  },
+  "GSM_Jonathan_has_as_many": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with equivalent terms and numbers, preserving all necessary information.",
+      "raw_response": "The paraphrase maintains the same structure and numerical values as the original problem, using different terminology without altering the meaning or difficulty.\n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with equivalent terms and numbers, preserving all necessary information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original meaning, numerical values, and context without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original meaning, numerical values, and context without adding or removing information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves numerical values, doesn't add or remove information, and remains grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves numerical values, doesn't add or remove information, and remains grammatically coherent.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original problem's requirements without altering any essential details."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same meaning, numerical values, and structure as the original problem without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same meaning, numerical values, and structure as the original problem without adding or omitting information."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same structure, numerical values, and calculation requirements with a different context.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same structure, numerical values, and calculation requirements with a different context."
+    }
+  },
+  "GSM_Micheal_loves_riding_a": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with identical numerical values and structure, ensuring semantic equivalence without altering difficulty or answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with identical numerical values and structure, ensuring semantic equivalence without altering difficulty or answer."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem without altering any key details or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem without altering any key details or numerical values."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately preserves all numerical values and asks for the same total distance without altering the problem's requirements.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately preserves all numerical values and asks for the same total distance without altering the problem's requirements."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the original problem without altering numerical values or structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the original problem without altering numerical values or structure."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems ask for total distance with identical numerical values, just different contexts and units, which do not affect the answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for total distance with identical numerical values, just different contexts and units, which do not affect the answer."
+    }
+  },
+  "GSM_Peter_wants_to_make": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem using precise mathematical language without altering the original meaning or numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem using precise mathematical language without altering the original meaning or numerical values."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with identical numerical values and asks for the same result.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with identical numerical values and asks for the same result."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original meaning, numerical values, and structure while using passive voice and reordering sentences.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original meaning, numerical values, and structure while using passive voice and reordering sentences."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with equivalent information and calculations.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with equivalent information and calculations."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems ask for leftover material after using specific amounts in different categories with identical numerical values.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for leftover material after using specific amounts in different categories with identical numerical values."
+    }
+  },
+  "GSM_Tim_has_a_box": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering numerical values or essential information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering numerical values or essential information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains all original information and asks for the same result without altering numerical values or introducing new elements.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all original information and asks for the same result without altering numerical values or introducing new elements."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original meaning, numerical values, and structure without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original meaning, numerical values, and structure without adding or omitting information."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 4,
+      "reason": "The paraphrase slightly changes the focus from specific colors to total count but preserves all necessary information and leads to the same numerical answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 4  \nREASON: The paraphrase slightly changes the focus from specific colors to total count but preserves all necessary information and leads to the same numerical answer."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems ask for the remaining count after using specific quantities from two categories, preserving all numerical values and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for the remaining count after using specific quantities from two categories, preserving all numerical values and structure."
+    }
+  },
+  "GSM_out_of_cheerleaders_are": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem with equivalent layers, heights, and requirements for calculation in feet.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem with equivalent layers, heights, and requirements for calculation in feet."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates all numerical values and structural details without altering meaning or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates all numerical values and structural details without altering meaning or difficulty."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original problem with equivalent information and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original problem with equivalent information and structure.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains all numerical values, structural details, and asks for the same result in feet without adding or omitting any critical information."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the problem without altering numerical values or structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the problem without altering numerical values or structure.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence and preserves all necessary information."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both problems ask for the total height of a pyramid structure with four layers, using the same numerical values converted to feet.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both problems ask for the total height of a pyramid structure with four layers, using the same numerical values converted to feet.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by preserving the structure and numerical values while changing context from cheerleaders to crates."
+    }
+  },
+  "ARC_Mercury_7040985": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by asking about lunar phase conditions for both eclipses, preserving options without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking about lunar phase conditions for both eclipses, preserving options without adding or removing information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase asks for the same information using casual language without altering the meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase asks for the same information using casual language without altering the meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by restructuring the question without altering its meaning, preserving all options, and ensuring grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by restructuring the question without altering its meaning, preserving all options, and ensuring grammatical coherence."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question with equivalent meaning and identical answer options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question with equivalent meaning and identical answer options."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by framing the same question in a different context without altering the answer choices or adding/removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by framing the same question in a different context without altering the answer choices or adding/removing information."
+    }
+  },
+  "ARC_TIMSS_2003_4_pg7": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question using precise terminology without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question using precise terminology without altering meaning or options."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the question using casual language while preserving all original elements and meaning.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the question using casual language while preserving all original elements and meaning."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves choices, and remains grammatically coherent without altering difficulty or information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves choices, and remains grammatically coherent without altering difficulty or information."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the original question without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the original question without altering meaning or options."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by focusing on decomposition rates, preserves all options, adds no altering information, and remains grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by focusing on decomposition rates, preserves all options, adds no altering information, and remains grammatically coherent.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both questions ask about the fastest decay of items without changing meaning or options."
+    }
+  },
+  "ARC_Mercury_SC_400578": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 4,
+      "reason": "The paraphrase accurately conveys the same question about learned behaviors, though there is a minor grammatical inconsistency in option D.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 4  \nREASON: The paraphrase accurately conveys the same question about learned behaviors, though there is a minor grammatical inconsistency in option D.  \n\nVERDICT: VALID  \nCONFIDENCE: 4  \nREASON: The paraphrase maintains semantic equivalence but has a slight grammatical error in option D."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the question about learned behaviors without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the question about learned behaviors without altering meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the question about learned behaviors without altering meaning or answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the question about learned behaviors without altering meaning or answer choices."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the question about learned behavior without changing its meaning.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the question about learned behavior without changing its meaning."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 4,
+      "reason": "The paraphrase accurately reflects the original question's intent, though a minor typo in option D is noted.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 4  \nREASON: The paraphrase accurately reflects the original question's intent, though a minor typo in option D is noted.  \n\nVERDICT: VALID  \nCONFIDENCE: 4  \nREASON: The paraphrase maintains semantic equivalence with the original but has a minor formatting issue."
+    }
+  },
+  "ARC_Mercury_7210455": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question using precise meteorological terminology without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question using precise meteorological terminology without altering meaning or options."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the question in casual language without altering its meaning or answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the question in casual language without altering its meaning or answer choices."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the original question while preserving meaning and options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the original question while preserving meaning and options."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question without altering its meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question without altering its meaning or options."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original meaning by focusing on a single observation of wind speed and its implications.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original meaning by focusing on a single observation of wind speed and its implications."
+    }
+  },
+  "ARC_VASoL_2009_5_30": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the question using formal terminology without altering the meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the question using formal terminology without altering the meaning or options."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the question using a clear definition of translucent without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the question using a clear definition of translucent without altering meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by asking about translucency of listed objects without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking about translucency of listed objects without altering meaning or options."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering its meaning or answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering its meaning or answer choices."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately mirrors the original question's intent and options without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately mirrors the original question's intent and options without adding or omitting information."
+    }
+  },
+  "ARC_Mercury_415083": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question using formal language without altering meaning or options, maintaining semantic equivalence and coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question using formal language without altering meaning or options, maintaining semantic equivalence and coherence."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase is identical to the original, preserving meaning, numerical values, and answer choices without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase is identical to the original, preserving meaning, numerical values, and answer choices without adding or removing information."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves numerical values and choices, adds no new information, and remains grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves numerical values and choices, adds no new information, and remains grammatically coherent.  \n\nThe answer is B) 5 m/s."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately converts units and preserves the original question's intent and answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately converts units and preserves the original question's intent and answer choices."
+    },
+    "P5": {
+      "verdict": "INVALID",
+      "confidence": 4,
+      "reason": "The units in the question and answer choices do not align.",
+      "raw_response": "The paraphrase changes the unit of measurement but keeps the same numerical options, which might cause confusion as the correct answer's unit doesn't match.\n\nVERDICT: INVALID\nCONFIDENCE: 4\nREASON: The units in the question and answer choices do not align."
+    }
+  },
+  "ARC_Mercury_175385": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question using precise terminology without altering meaning or answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question using precise terminology without altering meaning or answer choices."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by using \"combustion\" and restructuring the sentence while preserving all answer choices accurately.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by using \"combustion\" and restructuring the sentence while preserving all answer choices accurately."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent without altering its meaning or answer options.",
+      "raw_response": "The paraphrase maintains the original meaning by specifying the chemical components and process involved in burning, which doesn't change the core inquiry. All answer choices remain identical, ensuring no alteration in difficulty or correct answer. The structure is grammatically sound.\n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent without altering its meaning or answer options."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by focusing on the same event with a slightly different context without altering the question's meaning or answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by focusing on the same event with a slightly different context without altering the question's meaning or answer choices."
+    }
+  },
+  "ARC_Mercury_SC_400062": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both questions ask about the primary process behind plateau formation with identical options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both questions ask about the primary process behind plateau formation with identical options."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering meaning or options, maintaining semantic equivalence and grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering meaning or options, maintaining semantic equivalence and grammatical coherence."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering its meaning or answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering its meaning or answer choices."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves choices, and is grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves choices, and is grammatically coherent."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the original question about landform formation without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the original question about landform formation without altering meaning or options."
+    }
+  },
+  "ARC_MCAS_2003_8_7": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the question using equivalent terms and preserves all options without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the question using equivalent terms and preserves all options without adding or omitting information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restructures the original question without altering its meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restructures the original question without altering its meaning or options."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent without altering meaning or options."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by focusing on marketing tasks through a new employee's perspective without changing the core question or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by focusing on marketing tasks through a new employee's perspective without changing the core question or options."
+    }
+  },
+  "ARC_Mercury_401865": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent without altering meaning or choices.",
+      "raw_response": "The paraphrase accurately reflects the original by specifying \"photosynthesis equation,\" which correctly identifies the reaction. All answer options remain unchanged, preserving numerical and choice integrity. No additional information alters difficulty or the correct answer, which remains D. The question is grammatically sound.\n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent without altering meaning or choices."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the question using casual language while preserving all essential elements and answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the question using casual language while preserving all essential elements and answer choices."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent and content.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent and content."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question without altering its meaning or answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question without altering its meaning or answer."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately mirrors the original question's intent and structure with minimal punctuation change, preserving meaning and difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately mirrors the original question's intent and structure with minimal punctuation change, preserving meaning and difficulty."
+    }
+  },
+  "ARC_Mercury_SC_408366": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering meaning or options."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering meaning or choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering meaning or choices."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves choices, doesn't add or remove information, and remains grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves choices, doesn't add or remove information, and remains grammatically coherent."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent without altering meaning or options."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence with the original question, preserves all options correctly (with a minor typo in D), and asks for the same essential resource needed by all animals.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence with the original question, preserves all options correctly (with a minor typo in D), and asks for the same essential resource needed by all animals."
+    }
+  },
+  "ARC_Mercury_7005880": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question with identical answer choices, maintaining semantic equivalence and grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question with identical answer choices, maintaining semantic equivalence and grammatical coherence."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question in a more casual tone without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question in a more casual tone without altering meaning or options."
+    },
+    "P3": {
+      "verdict": "INVALID",
+      "confidence": 4,
+      "reason": "The paraphrase incorrectly adds a question mark to option D, altering its structure.",
+      "raw_response": "VERDICT: INVALID  \nCONFIDENCE: 4  \nREASON: The paraphrase incorrectly adds a question mark to option D, altering its structure."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent without altering meaning or options."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent without altering meaning or options."
+    }
+  },
+  "ARC_TIMSS_2011_8_pg31": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent and options, maintaining semantic equivalence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent and options, maintaining semantic equivalence."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restructures the original without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restructures the original without altering meaning or options."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question without altering meaning or introducing errors.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question without altering meaning or introducing errors."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both questions ask about the effect on atoms during physical deformation without altering the core concept or answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both questions ask about the effect on atoms during physical deformation without altering the core concept or answer choices."
+    }
+  },
+  "ARC_Mercury_7068513": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question using equivalent terms without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question using equivalent terms without altering meaning or options."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering its meaning or answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering its meaning or answer choices."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase restructures the question using passive voice but retains the same meaning and options without altering the content or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase restructures the question using passive voice but retains the same meaning and options without altering the content or difficulty."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question with added context about tectonic plates, preserving meaning and answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question with added context about tectonic plates, preserving meaning and answer choices."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately mirrors the original question's intent and answer choices without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately mirrors the original question's intent and answer choices without adding or omitting information."
+    }
+  },
+  "ARC_MCAS_2003_5_33": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question using formal language without altering its meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question using formal language without altering its meaning or options."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the original meaning, identical answer choices, and coherent structure without adding or omitting information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the original meaning, identical answer choices, and coherent structure without adding or omitting information."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the original question while preserving all key elements and answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the original question while preserving all key elements and answer choices."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains the same core concept with a classroom context and identical options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains the same core concept with a classroom context and identical options."
+    }
+  },
+  "ARC_Mercury_SC_401372": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the question using precise language while preserving all elements of the original.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the question using precise language while preserving all elements of the original."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering its meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering its meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase is semantically equivalent, uses identical options, and maintains the same meaning without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase is semantically equivalent, uses identical options, and maintains the same meaning without adding or removing information."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question by identifying the exception to adaptive traits, maintaining the same options and intent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question by identifying the exception to adaptive traits, maintaining the same options and intent."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by asking which trait does not help dolphins survive, preserving all options and context without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking which trait does not help dolphins survive, preserving all options and context without adding or removing information."
+    }
+  },
+  "ARC_Mercury_7032428": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent and options without altering meaning or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent and options without altering meaning or difficulty."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves numerical values and choices, doesn't add or remove information, and is grammatically coherent.",
+      "raw_response": "The paraphrase accurately reflects the original question, maintaining all key elements and options without adding or omitting information. It's grammatically correct and preserves the necessary details for a proper evaluation.\n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves numerical values and choices, doesn't add or remove information, and is grammatically coherent."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question without altering its meaning or essential details.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question without altering its meaning or essential details."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent and structure without altering key elements or introducing new information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent and structure without altering key elements or introducing new information."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Both versions describe an experiment comparing two groups over two years with a supplement and placebo, asking why it's flawed, maintaining semantic equivalence and identical options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: Both versions describe an experiment comparing two groups over two years with a supplement and placebo, asking why it's flawed, maintaining semantic equivalence and identical options."
+    }
+  },
+  "ARC_Mercury_7160563": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 4,
+      "reason": "The paraphrase accurately captures the original intent but has a minor punctuation error in option D.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 4  \nREASON: The paraphrase accurately captures the original intent but has a minor punctuation error in option D.  \n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase is semantically equivalent, preserves all options correctly, and maintains grammatical coherence without adding or removing information."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering its meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering its meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent and maintains all necessary details without altering meaning or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent and maintains all necessary details without altering meaning or difficulty."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent and maintains all necessary elements without altering meaning.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent and maintains all necessary elements without altering meaning."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by asking for an animal behavior that benefits the environment, preserving choices and clarity without altering meaning or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking for an animal behavior that benefits the environment, preserving choices and clarity without altering meaning or difficulty."
+    }
+  },
+  "ARC_MSA_2012_5_2": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 4,
+      "reason": "The paraphrase maintains semantic equivalence and choice preservation except for a minor typo in option D.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 4  \nREASON: The paraphrase maintains semantic equivalence and choice preservation except for a minor typo in option D."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 4,
+      "reason": "The paraphrase maintains semantic equivalence and preserves choices, though option D has an extraneous question mark.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 4  \nREASON: The paraphrase maintains semantic equivalence and preserves choices, though option D has an extraneous question mark.  \n\nVERDICT: VALID  \nCONFIDENCE: 4  \nREASON: The paraphrase is semantically equivalent but has a minor formatting issue with the question mark in option D."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original scenario and options without changing meaning or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original scenario and options without changing meaning or difficulty."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question without altering meaning or options."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by preserving the core scenario and answer choices, despite minor contextual adjustments.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by preserving the core scenario and answer choices, despite minor contextual adjustments."
+    }
+  },
+  "ARC_Mercury_7191433": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question using precise terminology without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question using precise terminology without altering meaning or options."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's meaning without altering its content or difficulty.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's meaning without altering its content or difficulty."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restructures the original question without altering its meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restructures the original question without altering its meaning or options."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 4,
+      "reason": "The paraphrase maintains the core question about recognition adaptations while specifying visual cues and chemical-based solutions without altering the correct answer.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 4  \nREASON: The paraphrase maintains the core question about recognition adaptations while specifying visual cues and chemical-based solutions without altering the correct answer."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent with a specific context, preserving all options and maintaining grammatical coherence.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent with a specific context, preserving all options and maintaining grammatical coherence."
+    }
+  },
+  "ARC_Mercury_7186568": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering meaning or options."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the question using passive voice without changing its meaning or answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the question using passive voice without changing its meaning or answer choices."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by asking about lysosomes' role in digestion with identical options, preserving meaning and structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking about lysosomes' role in digestion with identical options, preserving meaning and structure."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent and structure while maintaining the same answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent and structure while maintaining the same answer choices."
+    }
+  },
+  "ARC_Mercury_405778": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question without altering its meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question without altering its meaning or options."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves choices, adds no new information, and is grammatically coherent.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves choices, adds no new information, and is grammatically coherent."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by asking for the same information with a slightly restructured sentence order without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by asking for the same information with a slightly restructured sentence order without altering meaning or options."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately rephrases the question while preserving all necessary details and maintaining clarity.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately rephrases the question while preserving all necessary details and maintaining clarity."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by focusing on selecting an environmentally friendly power plant without altering the core question or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by focusing on selecting an environmentally friendly power plant without altering the core question or options."
+    }
+  },
+  "ARC_Mercury_7128555": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question with equivalent meaning and identical answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question with equivalent meaning and identical answer choices."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question using simpler language without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question using simpler language without altering meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence, preserves choices, and remains grammatically coherent without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence, preserves choices, and remains grammatically coherent without adding or removing information."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent and options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent and options."
+    },
+    "P5": {
+      "verdict": "INVALID",
+      "confidence": 4,
+      "reason": "The paraphrase alters the pollination method without adjusting the answer options appropriately, leading to potential confusion and a different correct answer.",
+      "raw_response": "The paraphrase changes the pollinator from moths to wind but keeps the same answer choices, which refer to flower colors. This inconsistency affects the meaning.\n\nVERDICT: INVALID  \nCONFIDENCE: 4  \nREASON: The paraphrase alters the pollination method without adjusting the answer options appropriately, leading to potential confusion and a different correct answer."
+    }
+  },
+  "ARC_Mercury_7005005": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question about moisture's effect on coastal precipitation without altering meaning, options, or scope.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question about moisture's effect on coastal precipitation without altering meaning, options, or scope.  \n\nThe paraphrase maintains semantic equivalence by focusing on how elevated moisture affects precipitation levels in coastal regions, which is the same as the original question. All answer choices are identical, preserving numerical and choice consistency. No additional information is introduced, and the grammatical structure remains coherent. The only minor issue is a typo in option D with an extra question mark, but this does not affect the meaning or difficulty of the question. Therefore, the paraphrase is valid.\n\nVERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question about moisture's effect on coastal precipitation without altering meaning, options, or scope."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original question and maintains all options without altering meaning.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original question and maintains all options without altering meaning."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restructures the original question using passive voice without altering meaning, preserving all answer options identically.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restructures the original question using passive voice without altering meaning, preserving all answer options identically."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question's intent and maintains identical answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question's intent and maintains identical answer choices."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase maintains semantic equivalence by focusing on coastal vs. inland climates and retains identical answer choices without adding or removing information.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase maintains semantic equivalence by focusing on coastal vs. inland climates and retains identical answer choices without adding or removing information."
+    }
+  },
+  "ARC_TIMSS_2007_8_pg53": {
+    "P0": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "Original problem -- no judgment needed."
+    },
+    "P1": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the question using formal language without altering its meaning or answer choices.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the question using formal language without altering its meaning or answer choices."
+    },
+    "P2": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately restates the original without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately restates the original without altering meaning or options."
+    },
+    "P3": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original question without altering meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original question without altering meaning or options."
+    },
+    "P4": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately reflects the original's content without altering its meaning or options.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately reflects the original's content without altering its meaning or options."
+    },
+    "P5": {
+      "verdict": "VALID",
+      "confidence": 5,
+      "reason": "The paraphrase accurately mirrors the original scenario with equivalent context and question structure.",
+      "raw_response": "VERDICT: VALID  \nCONFIDENCE: 5  \nREASON: The paraphrase accurately mirrors the original scenario with equivalent context and question structure."
+    }
+  }
+}

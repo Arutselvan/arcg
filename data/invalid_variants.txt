@@ -1,0 +1,71 @@
+ARCG Invalid Paraphrases — UNION (at least one judge)
+Min confidence: 1
+======================================================================
+
+Problem : ARC_Mercury_415083
+Variant : P5
+Judge A : INVALID (conf=4) — The units in the question and answer choices do not align.
+Judge B : INVALID (conf=5) — The paraphrase changes the unit of distance from meters to centimeters but retains answer choices in meters per second, leading to incorrect numerical equivalence.
+
+Problem : ARC_Mercury_7005880
+Variant : P3
+Judge A : INVALID (conf=4) — The paraphrase incorrectly adds a question mark to option D, altering its structure.
+Judge B : VALID (conf=5) — The paraphrase restructures the question using passive voice and altered phrasing without changing the meaning, preserving all answer choices and their content.
+
+Problem : ARC_Mercury_7128555
+Variant : P5
+Judge A : INVALID (conf=4) — The paraphrase alters the pollination method without adjusting the answer options appropriately, leading to potential confusion and a different correct answer.
+Judge B : VALID (conf=5) — The paraphrase maintains the logical structure and answer choices, substituting pollination methods and context while preserving semantic equivalence and correct answer (B).
+
+Problem : ARC_VASoL_2009_5_30
+Variant : P3
+Judge A : VALID (conf=5) — The paraphrase maintains semantic equivalence by asking about translucency of listed objects without altering meaning or options.
+Judge B : INVALID (conf=4) — The paraphrase incorrectly places a question mark after option (D), violating grammatical coherence.
+
+Problem : GSM_A_local_town_is
+Variant : P4
+Judge A : INVALID (conf=4) — The paraphrase may ambiguously interpret "match it again," potentially altering the calculation for year three and thus the total number of homes built.
+Judge B : VALID (conf=5) — The paraphrase accurately mirrors the original problem's structure, values, and operations, ensuring the same numerical answer (144) through equivalent phrasing.
+
+Problem : GSM_A_stickler_for_Octavia
+Variant : P4
+Judge A : INVALID (conf=5) — The paraphrase incorrectly states the recommended coffee intake, changing the problem's parameters.
+Judge B : VALID (conf=5) — The paraphrase correctly preserves all numerical values and the logical structure of the problem, ensuring semantic equivalence and a correct answer of 16.
+
+Problem : GSM_Griffin_had_french_but
+Variant : P4
+Judge A : VALID (conf=5) — The paraphrase accurately preserves all numerical values and relationships while maintaining grammatical coherence.
+Judge B : INVALID (conf=5) — The paraphrase incorrectly states Colby took "two fewer than Kyle" (3 fries) instead of "3 less than Kyle" (2 fries), altering the final answer.
+
+Problem : GSM_Jen_decides_to_travel
+Variant : P2
+Judge A : VALID (conf=5) — The paraphrase maintains the original meaning, numerical values, and asks for the same total cost calculation.
+Judge B : INVALID (conf=4) — The paraphrase asks for the "whole trip cost" (including supplies and tickets), while the original asks only for the "travel cost" (tickets), leading to a different answer.
+
+Problem : GSM_Jen_decides_to_travel
+Variant : P5
+Judge A : INVALID (conf=5) — The paraphrase asks for a different total, including both materials and labor, whereas the original only asks for travel costs.
+Judge B : VALID (conf=5) — The paraphrase maintains the same mathematical structure and numerical values, asking for the total cost (materials + labor) equivalent to the original's total travel cost (supplies + tickets).
+
+Problem : GSM_John_packs_in_small
+Variant : P4
+Judge A : INVALID (conf=4) — The paraphrase alters numerical values (30 to three dozen) and changes the count per small bag, which could affect understanding despite the same answer.
+Judge B : VALID (conf=5) — The paraphrase maintains semantic equivalence by preserving the proportional relationships (3 large bags, 10 ounces each, small bags containing one-third of an ounce's M&Ms) and recalculates values accordingly to retain the correct answer of 90.
+
+Problem : GSM_out_of_cheerleaders_are
+Variant : P5
+Judge A : VALID (conf=5) — Both problems ask for the total height of a pyramid structure with four layers, using the same numerical values converted to feet.
+Judge B : INVALID (conf=5) — The paraphrase changes units from inches to centimeters, altering the numerical answer unless adjusted, violating numerical preservation.
+
+
+Affected problem IDs (10):
+  ARC_Mercury_415083
+  ARC_Mercury_7005880
+  ARC_Mercury_7128555
+  ARC_VASoL_2009_5_30
+  GSM_A_local_town_is
+  GSM_A_stickler_for_Octavia
+  GSM_Griffin_had_french_but
+  GSM_Jen_decides_to_travel
+  GSM_John_packs_in_small
+  GSM_out_of_cheerleaders_are

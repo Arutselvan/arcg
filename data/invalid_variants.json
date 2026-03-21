@@ -1,0 +1,181 @@
+{
+  "logic": "union",
+  "min_confidence": 1,
+  "flagged_count": 11,
+  "affected_problems": [
+    "ARC_Mercury_415083",
+    "ARC_Mercury_7005880",
+    "ARC_Mercury_7128555",
+    "ARC_VASoL_2009_5_30",
+    "GSM_A_local_town_is",
+    "GSM_A_stickler_for_Octavia",
+    "GSM_Griffin_had_french_but",
+    "GSM_Jen_decides_to_travel",
+    "GSM_John_packs_in_small",
+    "GSM_out_of_cheerleaders_are"
+  ],
+  "invalid_variants": [
+    {
+      "problem_id": "ARC_Mercury_415083",
+      "variant": "P5",
+      "judge_a": {
+        "verdict": "INVALID",
+        "confidence": 4,
+        "reason": "The units in the question and answer choices do not align."
+      },
+      "judge_b": {
+        "verdict": "INVALID",
+        "confidence": 5,
+        "reason": "The paraphrase changes the unit of distance from meters to centimeters but retains answer choices in meters per second, leading to incorrect numerical equivalence."
+      }
+    },
+    {
+      "problem_id": "ARC_Mercury_7005880",
+      "variant": "P3",
+      "judge_a": {
+        "verdict": "INVALID",
+        "confidence": 4,
+        "reason": "The paraphrase incorrectly adds a question mark to option D, altering its structure."
+      },
+      "judge_b": {
+        "verdict": "VALID",
+        "confidence": 5,
+        "reason": "The paraphrase restructures the question using passive voice and altered phrasing without changing the meaning, preserving all answer choices and their content."
+      }
+    },
+    {
+      "problem_id": "ARC_Mercury_7128555",
+      "variant": "P5",
+      "judge_a": {
+        "verdict": "INVALID",
+        "confidence": 4,
+        "reason": "The paraphrase alters the pollination method without adjusting the answer options appropriately, leading to potential confusion and a different correct answer."
+      },
+      "judge_b": {
+        "verdict": "VALID",
+        "confidence": 5,
+        "reason": "The paraphrase maintains the logical structure and answer choices, substituting pollination methods and context while preserving semantic equivalence and correct answer (B)."
+      }
+    },
+    {
+      "problem_id": "ARC_VASoL_2009_5_30",
+      "variant": "P3",
+      "judge_a": {
+        "verdict": "VALID",
+        "confidence": 5,
+        "reason": "The paraphrase maintains semantic equivalence by asking about translucency of listed objects without altering meaning or options."
+      },
+      "judge_b": {
+        "verdict": "INVALID",
+        "confidence": 4,
+        "reason": "The paraphrase incorrectly places a question mark after option (D), violating grammatical coherence."
+      }
+    },
+    {
+      "problem_id": "GSM_A_local_town_is",
+      "variant": "P4",
+      "judge_a": {
+        "verdict": "INVALID",
+        "confidence": 4,
+        "reason": "The paraphrase may ambiguously interpret \"match it again,\" potentially altering the calculation for year three and thus the total number of homes built."
+      },
+      "judge_b": {
+        "verdict": "VALID",
+        "confidence": 5,
+        "reason": "The paraphrase accurately mirrors the original problem's structure, values, and operations, ensuring the same numerical answer (144) through equivalent phrasing."
+      }
+    },
+    {
+      "problem_id": "GSM_A_stickler_for_Octavia",
+      "variant": "P4",
+      "judge_a": {
+        "verdict": "INVALID",
+        "confidence": 5,
+        "reason": "The paraphrase incorrectly states the recommended coffee intake, changing the problem's parameters."
+      },
+      "judge_b": {
+        "verdict": "VALID",
+        "confidence": 5,
+        "reason": "The paraphrase correctly preserves all numerical values and the logical structure of the problem, ensuring semantic equivalence and a correct answer of 16."
+      }
+    },
+    {
+      "problem_id": "GSM_Griffin_had_french_but",
+      "variant": "P4",
+      "judge_a": {
+        "verdict": "VALID",
+        "confidence": 5,
+        "reason": "The paraphrase accurately preserves all numerical values and relationships while maintaining grammatical coherence."
+      },
+      "judge_b": {
+        "verdict": "INVALID",
+        "confidence": 5,
+        "reason": "The paraphrase incorrectly states Colby took \"two fewer than Kyle\" (3 fries) instead of \"3 less than Kyle\" (2 fries), altering the final answer."
+      }
+    },
+    {
+      "problem_id": "GSM_Jen_decides_to_travel",
+      "variant": "P2",
+      "judge_a": {
+        "verdict": "VALID",
+        "confidence": 5,
+        "reason": "The paraphrase maintains the original meaning, numerical values, and asks for the same total cost calculation."
+      },
+      "judge_b": {
+        "verdict": "INVALID",
+        "confidence": 4,
+        "reason": "The paraphrase asks for the \"whole trip cost\" (including supplies and tickets), while the original asks only for the \"travel cost\" (tickets), leading to a different answer."
+      }
+    },
+    {
+      "problem_id": "GSM_Jen_decides_to_travel",
+      "variant": "P5",
+      "judge_a": {
+        "verdict": "INVALID",
+        "confidence": 5,
+        "reason": "The paraphrase asks for a different total, including both materials and labor, whereas the original only asks for travel costs."
+      },
+      "judge_b": {
+        "verdict": "VALID",
+        "confidence": 5,
+        "reason": "The paraphrase maintains the same mathematical structure and numerical values, asking for the total cost (materials + labor) equivalent to the original's total travel cost (supplies + tickets)."
+      }
+    },
+    {
+      "problem_id": "GSM_John_packs_in_small",
+      "variant": "P4",
+      "judge_a": {
+        "verdict": "INVALID",
+        "confidence": 4,
+        "reason": "The paraphrase alters numerical values (30 to three dozen) and changes the count per small bag, which could affect understanding despite the same answer."
+      },
+      "judge_b": {
+        "verdict": "VALID",
+        "confidence": 5,
+        "reason": "The paraphrase maintains semantic equivalence by preserving the proportional relationships (3 large bags, 10 ounces each, small bags containing one-third of an ounce's M&Ms) and recalculates values accordingly to retain the correct answer of 90."
+      }
+    },
+    {
+      "problem_id": "GSM_out_of_cheerleaders_are",
+      "variant": "P5",
+      "judge_a": {
+        "verdict": "VALID",
+        "confidence": 5,
+        "reason": "Both problems ask for the total height of a pyramid structure with four layers, using the same numerical values converted to feet."
+      },
+      "judge_b": {
+        "verdict": "INVALID",
+        "confidence": 5,
+        "reason": "The paraphrase changes units from inches to centimeters, altering the numerical answer unless adjusted, violating numerical preservation."
+      }
+    }
+  ],
+  "stats": {
+    "total": 350,
+    "invalid_union": 11,
+    "invalid_both": 1,
+    "invalid_a_only": 6,
+    "invalid_b_only": 4,
+    "unknown": 0
+  }
+}

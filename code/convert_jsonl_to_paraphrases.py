@@ -57,16 +57,6 @@ SOLUTION_MARKERS = [
     r"\bthus\b",
     r"\bhence\b",
     r"\bexplanation\b",
-    r"\bsolution\b",
-    r"\bsolving\b",
-    r"\bwe (get|find|have|calculate|compute)\b",
-    r"\bfirst,\s",
-    r"\bsecond,\s",
-    r"\bfinally,\s",
-    r"=\s*\d",                    # "= 17"
-    r"\d+\s*\+\s*\d+",           # "15 + 2"
-    r"\d+\s*×\s*\d+",            # "3 × 5"
-    r"\d+\s*\*\s*\d+",           # "3 * 5"
 ]
 SOLUTION_RE = re.compile("|".join(SOLUTION_MARKERS), re.IGNORECASE)
 

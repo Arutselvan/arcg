@@ -1,0 +1,4288 @@
+{
+  "n_problems": 70,
+  "n_sources": 2,
+  "source_labels": [
+    "LLM-DeepSeek-R1-32B",
+    "LLM-Qwen3-32B"
+  ],
+  "acceptance_threshold": 3,
+  "total_paraphrases": 350,
+  "total_accepted": 0,
+  "total_rejected": 350,
+  "acceptance_rate": 0.0,
+  "cohens_kappa": {
+    "LLM-DeepSeek-R1-32B vs LLM-Qwen3-32B": 0.1525
+  },
+  "items": [
+    {
+      "id": "GSM_Digimon_had_its_When",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_John_takes_care_of",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Jason_and_DJ_each",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_A_football_team_has",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_In_a_candy_there",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_A_family_of_parents",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_The_book_is_printed",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_After_transferring_to_a",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_John_packs_in_small",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "NO",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 1,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_There_are_deer_in",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Jean_has_Jean_eats",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_The_expenditure_of_Joseph",
+      "domain": "math",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Sophia_and_Rose_went",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_For_each_small_task",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Mason_likes_eating_If",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Janet_buys_a_brooch",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_A_small_sunflower_has",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Matt_wants_cookies_for",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Bob_thinks_he_needs",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Courtney_attended_a_concert",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Julie_had_She_spent",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_John_picks_bananas_on",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Shiela_is_required_to",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Henry_made_two_stops",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_A_wallpaper_costs_at",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Jen_decides_to_travel",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "NO"
+          },
+          "yes_count": 1,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "NO",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 1,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Ricardo_grows_tomatoes_and",
+      "domain": "math",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_A_stickler_for_Octavia",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "NO",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 1,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Mason_is_on_his",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_It_takes_minutes_for",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Griffin_had_french_but",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "NO"
+          },
+          "yes_count": 1,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_A_pirate_crew_is",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Brady_is_counting_the",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Calvin_is_making_soup",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_A_local_town_is",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "NO",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 1,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Adam_went_to_a",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_boat_sprang_a_leak",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_and_Sarah_painted_easter",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Aaron_and_Vanessa_were",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Martha_is_planning_her",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Jonathan_has_as_many",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Micheal_loves_riding_a",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Peter_wants_to_make",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_Tim_has_a_box",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "GSM_out_of_cheerleaders_are",
+      "domain": "math",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "NO"
+          },
+          "yes_count": 1,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_7040985",
+      "domain": "logic",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_TIMSS_2003_4_pg7",
+      "domain": "logic",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_SC_400578",
+      "domain": "logic",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_7210455",
+      "domain": "logic",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_VASoL_2009_5_30",
+      "domain": "logic",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "NO"
+          },
+          "yes_count": 1,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_415083",
+      "domain": "logic",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "NO",
+            "LLM-Qwen3-32B": "NO"
+          },
+          "yes_count": 0,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_175385",
+      "domain": "logic",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_SC_400062",
+      "domain": "logic",
+      "difficulty": "easy",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_MCAS_2003_8_7",
+      "domain": "logic",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_401865",
+      "domain": "logic",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_SC_408366",
+      "domain": "logic",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_7005880",
+      "domain": "logic",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "NO",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 1,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_TIMSS_2011_8_pg31",
+      "domain": "logic",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_7068513",
+      "domain": "logic",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_MCAS_2003_5_33",
+      "domain": "logic",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_SC_401372",
+      "domain": "logic",
+      "difficulty": "medium",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_7032428",
+      "domain": "logic",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_7160563",
+      "domain": "logic",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_MSA_2012_5_2",
+      "domain": "logic",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_7191433",
+      "domain": "logic",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_7186568",
+      "domain": "logic",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_405778",
+      "domain": "logic",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_7128555",
+      "domain": "logic",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "NO",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 1,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_Mercury_7005005",
+      "domain": "logic",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    },
+    {
+      "id": "ARC_TIMSS_2007_8_pg53",
+      "domain": "logic",
+      "difficulty": "hard",
+      "variants": {
+        "P0": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": true,
+          "majority_vote": "YES"
+        },
+        "P1": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P2": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P3": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P4": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        },
+        "P5": {
+          "verdicts": {
+            "LLM-DeepSeek-R1-32B": "YES",
+            "LLM-Qwen3-32B": "YES"
+          },
+          "yes_count": 2,
+          "accepted": false,
+          "majority_vote": "NO"
+        }
+      }
+    }
+  ]
+}
